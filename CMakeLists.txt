@@ -10,13 +10,16 @@ project(pico-midi-controller)
 pico_sdk_init()
 
 # rest of your project
+add_subdirectory(freertos)
+add_subdirectory(components/lcd)
+add_subdirectory(components/controls)
 if (TARGET tinyusb_device)
     add_executable(main
             main.c
             )
 
     # pull in common dependencies
-    target_link_libraries(main pico_stdlib hardware_i2c)
+    target_link_libraries(main pico_stdlib freertos controls lcd)
 
 
     # enable usb output, disable uart output
