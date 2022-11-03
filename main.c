@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "components/lcd/lcd.h"
 #include "components/controls/controls.h"
+#include "components/midi_usb/midi_usb.h"
 
 
 int main() {
@@ -19,11 +20,15 @@ int main() {
     stdio_init_all();
     buttons_init(btn_pins);
     lcd_init();
+    midi_init();
 
     //main loop
     while(1){
         btn_pressed = check_buttons_state(btn_pins);
         btn_pressed_old = update_lcd(btn_pressed, btn_pressed_old);
+        tud_task(); // tinyusb device task
+        led_blinking_task();
+        midi_task();
     } 
     return 0;
 }

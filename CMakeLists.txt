@@ -13,18 +13,19 @@ pico_sdk_init()
 add_subdirectory(freertos)
 add_subdirectory(components/lcd)
 add_subdirectory(components/controls)
+add_subdirectory(components/midi_usb)
 if (TARGET tinyusb_device)
     add_executable(main
             main.c
             )
 
     # pull in common dependencies
-    target_link_libraries(main pico_stdlib freertos controls lcd)
+    target_link_libraries(main pico_stdlib freertos controls lcd midi_usb)
 
 
     # enable usb output, disable uart output
-    pico_enable_stdio_usb(main 1)
-    pico_enable_stdio_uart(main 0)
+    pico_enable_stdio_usb(main 0)
+    pico_enable_stdio_uart(main 1)
 
     # create map/bin/hex/uf2 file etc.
     pico_add_extra_outputs(main)
