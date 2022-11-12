@@ -12,7 +12,7 @@
 #define NUM_OF_BTNS 16
 
 void midi_init(void);
-void led_blinking_task(void);
+uint32_t led_interval(void);
 void midi_send(uint16_t btns_pressed);
 
 #endif

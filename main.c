@@ -23,6 +23,8 @@ void controlls_polling(void *arg){
         if(btns_pressed != btns_pressed_old){
             xQueueSend(logic_queue, (void *)&btns_pressed, (TickType_t) 0);
             btns_pressed_old=btns_pressed;
+        } else {
+            vTaskDelay(portTICK_PERIOD_MS);
         }
     }
 }
@@ -31,10 +33,12 @@ void logic_controller(void *arg){
     uint16_t pressed_buff;
     char msg[32];
     while(1){
-        if(xQueueReceive(logic_queue, &pressed_buff, (TickType_t) 0) == pdTRUE){
+        if(xQueueReceive(logic_queue, &(pressed_buff), (TickType_t) 10) == pdTRUE){
             midi_send(pressed_buff);
             itoa(pressed_buff, msg, 10);
             send_to_lcd(msg);
+        } else {
+            vTaskDelay(portTICK_PERIOD_MS);
         }
     }
     
@@ -43,12 +47,18 @@ void logic_controller(void *arg){
 void usb_task(void *arg){
     while(1){
         tud_task();
+        vTaskDelay(1/portTICK_PERIOD_MS);
     }
 }
 
 void blink(void *arg){
+    uint32_t blink_interval;
     while(1){
-        
+        blink_interval = led_interval();
+        gpio_put(PICO_DEFAULT_LED_PIN, 1);
+        vTaskDelay(blink_interval/portTICK_PERIOD_MS);
+        gpio_put(PICO_DEFAULT_LED_PIN, 0);
+        vTaskDelay(blink_interval/portTICK_PERIOD_MS);
     }
 }
 
@@ -57,7 +67,7 @@ int main() {
     stdio_init_all();
     buttons_init(btn_pins);
     lcd_init();
-    // midi_init();
+    midi_init();
 
     //TESTING!!!
     gpio_init(PICO_DEFAULT_LED_PIN);
@@ -65,15 +75,15 @@ int main() {
     //TESTING!!!
 
     //queue definitions
-    logic_queue = xQueueCreate(10, sizeof(uint16_t));
+    logic_queue = xQueueCreate(2, sizeof(uint16_t));
 
     //main tasks
     xTaskCreate(controlls_polling, "Controls-pooling-task", 1024, NULL, 10, NULL);
     xTaskCreate(logic_controller, "Logic-controller-task", 1024, NULL, 11, NULL);
-    // xTaskCreate(usb_task, "usb-task", 256, NULL,12,NULL);
+    xTaskCreate(usb_task, "usb-task", 256, NULL,15,NULL);
 
     //TESTING
-    xTaskCreate(blink, "blink", 256, NULL, 11, NULL);
+    xTaskCreate(blink, "blink", 256, NULL, 12, NULL);
     //TESTING
 
     vTaskStartScheduler();

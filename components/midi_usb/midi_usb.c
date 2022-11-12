@@ -60,29 +60,23 @@ void midi_send(uint16_t btns_pressed)
   uint8_t packet[4];
   while ( tud_midi_available() ) tud_midi_packet_read(packet);
 
-  for(int i=0; i<NUM_OF_BTNS; i++){
-    if(btns_pressed & 1 << i){
-      uint8_t note_on[3] = { 0x90 | channel, notes[i], 127 };
-      tud_midi_stream_write(cable_num, note_on, 3);
-    } else {
-      uint8_t note_off[3] = { 0x80 | channel, notes[i], 0};
-      tud_midi_stream_write(cable_num, note_off, 3);
-    }
-  }
+
+
+  // for(int i=0; i<NUM_OF_BTNS; i++){
+  //   if(btns_pressed & (1 << i)){
+  //     uint8_t note_on[3] = { 0x90 | channel, notes[i], 127 };
+  //     tud_midi_stream_write(cable_num, note_on, 3);
+  //   } else {
+  //     uint8_t note_off[3] = { 0x80 | channel, notes[i], 0};
+  //     tud_midi_stream_write(cable_num, note_off, 3);
+  //   }
+  // }
 }
 
 //--------------------------------------------------------------------+
 // BLINKING TASK
 //--------------------------------------------------------------------+
-void led_blinking_task(void)
+uint32_t led_interval(void)
 {
-  static uint32_t start_ms = 0;
-  static bool led_state = false;
-
-  // Blink every interval ms
-  if ( board_millis() - start_ms < blink_interval_ms) return; // not enough time
-  start_ms += blink_interval_ms;
-
-  board_led_write(led_state);
-  led_state = 1 - led_state; // toggle
+  return blink_interval_ms;
 }
