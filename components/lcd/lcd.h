@@ -13,6 +13,6 @@
 #define NUM_OF_BTNS 16
 
 void lcd_init();
-uint16_t update_lcd(uint16_t pressed, uint16_t pressed_old);
+void update_lcd(uint16_t pressed);
 
 #endif

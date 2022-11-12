@@ -32,19 +32,14 @@ void lcd_init(){
     bi_decl(bi_2pins_with_func(PICO_I2C_SDA_PIN, PICO_I2C_SCL_PIN, GPIO_FUNC_I2C));
 }
 
-uint16_t update_lcd(uint16_t pressed, uint16_t pressed_old){
+void update_lcd(uint16_t pressed){
     char msg[MSG_MAXSIZE];
-    if(pressed != pressed_old){
-        for(int i=0; i<NUM_OF_BTNS; i++){
-            if(pressed & (1<<i)){
-                msg[i]='+';
-            } else {
-                msg[i]='-';
-            }
+    for(int i=0; i<NUM_OF_BTNS; i++){
+        if(pressed & (1<<i)){
+            msg[i]='+';
+        } else {
+            msg[i]='-';
         }
         send_to_lcd(msg);
-        send_to_lcd(msg);
-        return pressed;
     }
-    return pressed_old;
 }

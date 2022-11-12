@@ -1,6 +1,6 @@
 #include "controls.h"
 
-uint16_t check_buttons_state(uint8_t button_pins[]){
+uint16_t buttons_pooling(uint8_t button_pins[]){
     uint16_t pressed;
     for(int i=0; i<NUM_OF_BTNS; i++){
         //all pullups, check for low state

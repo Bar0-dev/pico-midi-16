@@ -1,4 +1,4 @@
-set(PICO_SDK_FREERTOS_SOURCE /home/bartosz/freertos/FreeRTOS-Kernel)
+set(PICO_SDK_FREERTOS_SOURCE $ENV{FREERTOS_PATH})
 
 add_library(freertos
     ${PICO_SDK_FREERTOS_SOURCE}/event_groups.c
