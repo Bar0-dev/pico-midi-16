@@ -13,6 +13,6 @@
 
 void midi_init(void);
 uint32_t led_interval(void);
-void midi_send(uint16_t btns_pressed);
+void midi_send(uint16_t btns_pressed, uint16_t btns_pressed_old);
 
 #endif

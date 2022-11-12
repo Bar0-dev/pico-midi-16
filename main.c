@@ -31,12 +31,9 @@ void controlls_polling(void *arg){
 
 void logic_controller(void *arg){
     uint16_t pressed_buff;
-    char msg[32];
     while(1){
         if(xQueueReceive(logic_queue, &(pressed_buff), (TickType_t) 10) == pdTRUE){
             midi_send(pressed_buff);
-            itoa(pressed_buff, msg, 10);
-            send_to_lcd(msg);
         } else {
             vTaskDelay(portTICK_PERIOD_MS);
         }
@@ -47,7 +44,7 @@ void logic_controller(void *arg){
 void usb_task(void *arg){
     while(1){
         tud_task();
-        vTaskDelay(1/portTICK_PERIOD_MS);
+        vTaskDelay(portTICK_PERIOD_MS);
     }
 }
 

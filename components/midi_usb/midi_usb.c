@@ -49,7 +49,7 @@ void tud_resume_cb(void)
 
 uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
 
-void midi_send(uint16_t btns_pressed)
+void midi_send(uint16_t btns_pressed, uint16_t btns_pressed_old)
 {
   uint8_t const cable_num = 0; // MIDI jack associated with USB endpoint
   uint8_t const channel   = 0; // 0 for channel 1
@@ -57,20 +57,18 @@ void midi_send(uint16_t btns_pressed)
   // The MIDI interface always creates input and output port/jack descriptors
   // regardless of these being used or not. Therefore incoming traffic should be read
   // (possibly just discarded) to avoid the sender blocking in IO
-  uint8_t packet[4];
-  while ( tud_midi_available() ) tud_midi_packet_read(packet);
+  // uint8_t packet[4];
+  // while ( tud_midi_available() ) tud_midi_packet_read(packet);
 
-
-
-  // for(int i=0; i<NUM_OF_BTNS; i++){
-  //   if(btns_pressed & (1 << i)){
-  //     uint8_t note_on[3] = { 0x90 | channel, notes[i], 127 };
-  //     tud_midi_stream_write(cable_num, note_on, 3);
-  //   } else {
-  //     uint8_t note_off[3] = { 0x80 | channel, notes[i], 0};
-  //     tud_midi_stream_write(cable_num, note_off, 3);
-  //   }
-  // }
+  for(int i=0; i<NUM_OF_BTNS; i++){
+    if(btns_pressed & (1 << i)){
+      uint8_t note_on[3] = { 0x90 | channel, notes[i], 127 };
+      tud_midi_stream_write(cable_num, note_on, 3);
+    } else {
+      uint8_t note_off[3] = { 0x80 | channel, notes[i], 0};
+      tud_midi_stream_write(cable_num, note_off, 3);
+    }
+  }
 }
 
 //--------------------------------------------------------------------+
