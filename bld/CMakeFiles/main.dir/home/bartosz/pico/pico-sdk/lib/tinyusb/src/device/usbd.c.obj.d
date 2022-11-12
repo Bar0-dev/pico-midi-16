@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/tusb_config.h \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/tusb_config.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
@@ -38,9 +38,9 @@ CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
  /usr/include/newlib/assert.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \

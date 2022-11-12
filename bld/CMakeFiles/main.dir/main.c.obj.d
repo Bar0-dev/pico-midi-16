@@ -1,18 +1,18 @@
 CMakeFiles/main.dir/main.c.obj: \
- /home/bartosz/Projects/pico-midi-16/main.c \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/FreeRTOS.h \
+ /home/bartosz/projects/pico-midi-16/main.c \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/FreeRTOS.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /home/bartosz/Projects/pico-midi-16/freertos/./FreeRTOSConfig.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/projdefs.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/portable.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/deprecated_definitions.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/mpu_wrappers.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/task.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/list.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/queue.h \
- /home/bartosz/freertos/FreeRTOS-Kernel/include/task.h \
+ /home/bartosz/projects/pico-midi-16/freertos/./FreeRTOSConfig.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/projdefs.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/portable.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/deprecated_definitions.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/mpu_wrappers.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/task.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/list.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/queue.h \
+ /home/bartosz/libs/FreeRTOS-Kernel/include/task.h \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -30,16 +30,16 @@ CMakeFiles/main.dir/main.c.obj: \
  /usr/include/newlib/machine/types.h /usr/include/newlib/sys/stdio.h \
  /usr/include/newlib/stdlib.h /usr/include/newlib/machine/stdlib.h \
  /usr/include/newlib/alloca.h \
- /home/bartosz/Projects/pico-midi-16/components/lcd/lcd.h \
+ /home/bartosz/projects/pico-midi-16/components/lcd/lcd.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  /usr/include/newlib/assert.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
@@ -76,8 +76,8 @@ CMakeFiles/main.dir/main.c.obj: \
  /home/bartosz/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h \
- /home/bartosz/Projects/pico-midi-16/components/controls/controls.h \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/midi_usb.h \
+ /home/bartosz/projects/pico-midi-16/components/controls/controls.h \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/midi_usb.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/board.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/ansi_escape.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.h \
@@ -85,7 +85,7 @@ CMakeFiles/main.dir/main.c.obj: \
  /usr/include/newlib/string.h /usr/include/newlib/sys/_locale.h \
  /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/tusb_config.h \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/tusb_config.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \

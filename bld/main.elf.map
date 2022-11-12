@@ -17,7 +17,7 @@ components/controls/libcontrols.a(controls.c.obj)
 components/lcd/liblcd.a(lcd.c.obj)
                               CMakeFiles/main.dir/main.c.obj (send_to_lcd)
 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                              CMakeFiles/main.dir/main.c.obj (midi_send)
+                              CMakeFiles/main.dir/main.c.obj (midi_init)
 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
                               CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj (tud_descriptor_device_cb)
 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
@@ -165,8 +165,6 @@ Discarded input sections
                 0x0000000000000000       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  .text.hw_is_claimed
                 0x0000000000000000       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .text.hw_claim_unused_from_range
-                0x0000000000000000       0x9c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  .text.hw_claim_clear
                 0x0000000000000000       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -187,13 +185,8 @@ Discarded input sections
                 0x0000000000000000       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .text.spin_lock_unclaim
                 0x0000000000000000       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .rodata.spin_lock_claim_unused.str1.4
-                0x0000000000000000       0x1b CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .text.spin_lock_claim_unused
-                0x0000000000000000       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .text.spin_lock_is_claimed
                 0x0000000000000000       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .bss.claimed   0x0000000000000000        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -398,15 +391,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .text.critical_section_init
-                0x0000000000000000       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .text.critical_section_init_with_lock_num
                 0x0000000000000000       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .text.critical_section_deinit
                 0x0000000000000000       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .comment       0x0000000000000000       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
- .ARM.attributes
-                0x0000000000000000       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -996,8 +984,6 @@ Discarded input sections
                 0x0000000000000000       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdin_uart_init
                 0x0000000000000000       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text.stdio_uart_init_full
-                0x0000000000000000       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr49
                 0x0000000000000000        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr53
@@ -1040,22 +1026,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .rodata.dcd_rp2040_irq.str1.4
-                0x0000000000000000       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .text.dcd_rp2040_irq
-                0x0000000000000000      0x21c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .text.dcd_int_enable
-                0x0000000000000000        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_int_disable
                 0x0000000000000000        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_remote_wakeup
                 0x0000000000000000       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_disconnect
                 0x0000000000000000       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .text.dcd_connect
-                0x0000000000000000       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .text.dcd_init
-                0x0000000000000000      0x144 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_edpt_close
                 0x0000000000000000        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_int_handler
@@ -1063,14 +1039,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .text.rp2040_usb_init
-                0x0000000000000000       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .text.hw_endpoint_reset_transfer
-                0x0000000000000000        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .rodata.hw_endpoint_xfer_continue.str1.4
-                0x0000000000000000       0x29 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- .text.hw_endpoint_xfer_continue
-                0x0000000000000000      0x1e4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -1088,20 +1056,10 @@ Discarded input sections
                 0x0000000000000000       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.tud_connect
                 0x0000000000000000       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .text.tud_init
-                0x0000000000000000       0xd8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.tud_task_event_ready
                 0x0000000000000000       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.dcd_event_handler
                 0x0000000000000000      0x128 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .text.dcd_event_bus_signal
-                0x0000000000000000      0x120 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .text.dcd_event_bus_reset
-                0x0000000000000000       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .text.dcd_event_setup_received
-                0x0000000000000000       0x50 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .text.dcd_event_xfer_complete
-                0x0000000000000000       0x68 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.usbd_open_edpt_pair
                 0x0000000000000000       0x80 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.usbd_defer_func
@@ -1118,12 +1076,6 @@ Discarded input sections
                 0x0000000000000000       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text.usbd_edpt_close
                 0x0000000000000000       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._ubsd_mutexdef
-                0x0000000000000000        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._usbd_qdef_buf
-                0x0000000000000000       0xc0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .data._usbd_qdef
-                0x0000000000000000       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -1166,6 +1118,8 @@ Discarded input sections
                 0x0000000000000000      0x118 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
  .rodata.tud_midi_n_stream_read
                 0x0000000000000000       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+ .text.tud_midi_n_stream_write
+                0x0000000000000000      0x1b0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
  .text.tud_midi_n_packet_write
                 0x0000000000000000       0x8c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -1207,8 +1161,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
- .text.tusb_init
-                0x0000000000000000        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .text.tu_desc_get_interface_total_len
                 0x0000000000000000       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -1228,8 +1180,6 @@ Discarded input sections
                 0x0000000000000000       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.tu_fifo_peek_n
                 0x0000000000000000       0xdc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
- .text.tu_fifo_write
-                0x0000000000000000       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.tu_fifo_write_n_const_addr_full_words
                 0x0000000000000000      0x234 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .text.tu_fifo_set_overwritable
@@ -1265,8 +1215,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .time_critical.get_bootsel_button
                 0x0000000000000000       0x60 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .text.board_init
-                0x0000000000000000       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .text.board_led_write
                 0x0000000000000000       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .text.board_button_read
@@ -1275,8 +1223,6 @@ Discarded input sections
                 0x0000000000000000       0x28 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .text.board_uart_write
                 0x0000000000000000       0x50 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .bss.uart_inst
-                0x0000000000000000        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .data          0x0000000000000000        0x0 freertos/libfreertos.a(queue.c.obj)
  .data          0x0000000000000000        0x0 freertos/libfreertos.a(timers.c.obj)
  .data          0x0000000000000000        0x0 freertos/libfreertos.a(heap_3.c.obj)
@@ -1295,22 +1241,15 @@ Discarded input sections
  .text          0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .data          0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .bss           0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
- .text.midi_init
-                0x0000000000000000        0xc components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
- .text.led_blinking_task
-                0x0000000000000000       0x50 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
- .bss.led_state.0
-                0x0000000000000000        0x1 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
- .bss.start_ms.1
-                0x0000000000000000        0x4 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+ .data.notes    0x0000000000000000       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .rodata.LED_PIN
                 0x0000000000000000        0x4 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .text          0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
  .data          0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
  .bss           0x0000000000000000        0x0 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
- .text          0x0000000000000000        0x0 /tmp/ccUofhH0.o
- .data          0x0000000000000000        0x0 /tmp/ccUofhH0.o
- .bss           0x0000000000000000        0x0 /tmp/ccUofhH0.o
+ .text          0x0000000000000000        0x0 /tmp/cc6csdNL.o
+ .data          0x0000000000000000        0x0 /tmp/cc6csdNL.o
+ .bss           0x0000000000000000        0x0 /tmp/cc6csdNL.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1494,11 +1433,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccUofhH0.o
+ .boot2         0x0000000010000000      0x100 /tmp/cc6csdNL.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x7880
+.text           0x0000000010000100     0x8168
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1558,514 +1497,574 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x00000000100002c4       0x98 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .text.controlls_polling
-                0x000000001000035c       0x44 CMakeFiles/main.dir/main.c.obj
+                0x000000001000035c       0x48 CMakeFiles/main.dir/main.c.obj
                 0x000000001000035c                controlls_polling
  .text.logic_controller
-                0x00000000100003a0       0x38 CMakeFiles/main.dir/main.c.obj
-                0x00000000100003a0                logic_controller
+                0x00000000100003a4       0x48 CMakeFiles/main.dir/main.c.obj
+                0x00000000100003a4                logic_controller
  .text.usb_task
-                0x00000000100003d8        0x8 CMakeFiles/main.dir/main.c.obj
-                0x00000000100003d8                usb_task
+                0x00000000100003ec       0x10 CMakeFiles/main.dir/main.c.obj
+                0x00000000100003ec                usb_task
+ .text.blink    0x00000000100003fc       0x28 CMakeFiles/main.dir/main.c.obj
+                0x00000000100003fc                blink
  .text.startup.main
-                0x00000000100003e0       0x94 CMakeFiles/main.dir/main.c.obj
-                0x00000000100003e0                main
+                0x0000000010000424       0xb4 CMakeFiles/main.dir/main.c.obj
+                0x0000000010000424                main
  .text.gpio_set_function
-                0x0000000010000474       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000474                gpio_set_function
+                0x00000000100004d8       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x00000000100004d8                gpio_set_function
  .text.gpio_set_pulls
-                0x00000000100004a4       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100004a4                gpio_set_pulls
+                0x0000000010000508       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000508                gpio_set_pulls
  .text.gpio_init
-                0x00000000100004d4       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100004d4                gpio_init
+                0x0000000010000538       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000538                gpio_init
  .text.hw_claim_or_assert
-                0x0000000010000510       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000510                hw_claim_or_assert
+                0x0000000010000574       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000574                hw_claim_or_assert
+ .text.hw_claim_unused_from_range
+                0x00000000100005b8       0x9c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000000100005b8                hw_claim_unused_from_range
  .text.running_on_fpga
-                0x0000000010000554       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010000554                running_on_fpga
+                0x0000000010000654       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x0000000010000654                running_on_fpga
  .text.spin_locks_reset
-                0x0000000010000564       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000564                spin_locks_reset
+                0x0000000010000664       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000664                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010000580       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000580                next_striped_spin_lock_num
+                0x0000000010000680       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000680                next_striped_spin_lock_num
+ .text.spin_lock_claim_unused
+                0x0000000010000698       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000698                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x0000000010000598       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000598                irq_set_enabled
+                0x00000000100006b8       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100006b8                irq_set_enabled
  .text.irq_get_vtable_handler
-                0x00000000100005bc       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100005bc                irq_get_vtable_handler
+                0x00000000100006dc       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100006dc                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x00000000100005cc       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100005cc                irq_set_exclusive_handler
+                0x00000000100006ec       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100006ec                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x0000000010000620      0x1b4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000620                irq_remove_handler
+                0x0000000010000740      0x1b4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000740                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x00000000100007d4       0xb4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100007d4                irq_add_tail_to_free_list
+                0x00000000100008f4       0xb4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100008f4                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x0000000010000888       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000888                irq_init_priorities
+                0x00000000100009a8       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100009a8                irq_init_priorities
  .text.lock_init
-                0x00000000100008ac       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x00000000100008ac                lock_init
+                0x00000000100009cc       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x00000000100009cc                lock_init
  .text.timer_pool_entry_comparator
-                0x00000000100008bc       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100008bc                timer_pool_entry_comparator
+                0x00000000100009dc       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100009dc                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x00000000100008f0       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000a10       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x0000000010000920      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000a40      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x0000000010000a20      0x1c8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000b40      0x1c8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_add_alarm_at.constprop.0
-                0x0000000010000be8      0x11c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000d08      0x11c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010000d04       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000d04                alarm_pool_init_default
+                0x0000000010000e24       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000e24                alarm_pool_init_default
  .text.best_effort_wfe_or_timeout
-                0x0000000010000d68       0xd4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010000d68                best_effort_wfe_or_timeout
+                0x0000000010000e88       0xd4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010000e88                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010000e3c       0xb8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010000f5c       0xb8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x0000000010000ef4       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000ef4                hardware_alarm_claim
+                0x0000000010001014       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001014                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010000f0c       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f0c                time_us_64
+                0x000000001000102c       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000102c                time_us_64
  .text.hardware_alarm_set_callback
-                0x0000000010000f20       0x8c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000f20                hardware_alarm_set_callback
+                0x0000000010001040       0x8c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001040                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x0000000010000fac       0xe0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010000fac                hardware_alarm_set_target
+                0x00000000100010cc       0xe0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100010cc                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x000000001000108c       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000108c                hardware_alarm_cancel
+                0x00000000100011ac       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100011ac                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x00000000100010c8       0x68 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100011e8       0x68 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010001130       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001130                ph_post_alloc_init
+                0x0000000010001250       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001250                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x000000001000116c       0x90 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x000000001000116c                ph_merge_two_pass
+                0x000000001000128c       0x90 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000128c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x00000000100011fc       0xf8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000131c       0xf8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x00000000100012f4       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100012f4                ph_remove_head
+                0x0000000010001414       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001414                ph_remove_head
  .text.ph_remove_and_free_node
-                0x00000000100013f0       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100013f0                ph_remove_and_free_node
+                0x0000000010001510       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001510                ph_remove_and_free_node
  .text.mutex_init
-                0x000000001000146c       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x000000001000146c                mutex_init
+                0x000000001000158c       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x000000001000158c                mutex_init
  .text.recursive_mutex_init
-                0x0000000010001488       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010001488                recursive_mutex_init
+                0x00000000100015a8       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100015a8                recursive_mutex_init
+ .text.critical_section_init
+                0x00000000100015c4       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100015c4                critical_section_init
  .text.uart_init
-                0x00000000100014a4       0xe0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x00000000100014a4                uart_init
+                0x00000000100015e4       0xe0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x00000000100015e4                uart_init
  .text.runtime_init
-                0x0000000010001584       0xf0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001584                runtime_init
- .text._sbrk    0x0000000010001674       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010001674                _sbrk
- .text.exit     0x00000000100016a8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x00000000100016a8                exit
- .text.panic    0x00000000100016ac       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x00000000100016ac                panic
+                0x00000000100016c4       0xf0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100016c4                runtime_init
+ .text._sbrk    0x00000000100017b4       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100017b4                _sbrk
+ .text.exit     0x00000000100017e8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100017e8                exit
+ .text.panic    0x00000000100017ec       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100017ec                panic
  .text.hard_assertion_failure
-                0x00000000100016dc        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x00000000100016dc                hard_assertion_failure
+                0x000000001000181c        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000181c                hard_assertion_failure
  .text.clocks_init
-                0x00000000100016e8      0x2bc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100016e8                clocks_init
+                0x0000000010001828      0x2bc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001828                clocks_init
  .text.clock_get_hz
-                0x00000000100019a4        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100019a4                clock_get_hz
+                0x0000000010001ae4        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010001ae4                clock_get_hz
  .text.pll_init
-                0x00000000100019b0       0xb0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x00000000100019b0                pll_init
+                0x0000000010001af0       0xb0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010001af0                pll_init
  .text.watchdog_start_tick
-                0x0000000010001a60       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010001a60                watchdog_start_tick
+                0x0000000010001ba0       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010001ba0                watchdog_start_tick
  .text.xosc_init
-                0x0000000010001a70       0x28 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010001a70                xosc_init
+                0x0000000010001bb0       0x28 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010001bb0                xosc_init
  .text._out_char
-                0x0000000010001a98       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010001bd8       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_vprintf
-                0x0000000010001aa8       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010001aa8                weak_raw_vprintf
- .text          0x0000000010001ad8       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010001be8       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010001be8                weak_raw_vprintf
+ .text          0x0000000010001c18       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x0000000010001ae8       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010001ae8                rom_func_lookup
+                0x0000000010001c28       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010001c28                rom_func_lookup
  .text.rom_data_lookup
-                0x0000000010001af8       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010001af8                rom_data_lookup
+                0x0000000010001c38       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010001c38                rom_data_lookup
  .text.rom_funcs_lookup
-                0x0000000010001b08       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010001b08                rom_funcs_lookup
+                0x0000000010001c48       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010001c48                rom_funcs_lookup
  .text.__wrap___aeabi_uidiv
-                0x0000000010001b4c       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010001b4c                __wrap___aeabi_uidiv
-                0x0000000010001b4c                __wrap___aeabi_uidivmod
-                0x0000000010001b4c                div_u32u32
-                0x0000000010001b4c                divmod_u32u32
-                0x0000000010001b54                divmod_u32u32_unsafe
-                0x0000000010001b7c                divmod_u32u32_savestate
+                0x0000000010001c8c       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010001c8c                __wrap___aeabi_uidiv
+                0x0000000010001c8c                __wrap___aeabi_uidivmod
+                0x0000000010001c8c                div_u32u32
+                0x0000000010001c8c                divmod_u32u32
+                0x0000000010001c94                divmod_u32u32_unsafe
+                0x0000000010001cbc                divmod_u32u32_savestate
  .text.__aeabi_double_init
-                0x0000000010001b98       0x94 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010001b98                __aeabi_double_init
+                0x0000000010001cd8       0x94 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010001cd8                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x0000000010001c2c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010001c2c                double_table_shim_on_use_helper
+                0x0000000010001d6c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010001d6c                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x0000000010001c58       0x32 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x0000000010001c58                __wrap___aeabi_lmul
- *fill*         0x0000000010001c8a        0x2 
+                0x0000000010001d98       0x32 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x0000000010001d98                __wrap___aeabi_lmul
+ *fill*         0x0000000010001dca        0x2 
  .text.__aeabi_float_init
-                0x0000000010001c8c       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010001c8c                __aeabi_float_init
+                0x0000000010001dcc       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000010001dcc                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x0000000010001cf0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010001cf0                float_table_shim_on_use_helper
+                0x0000000010001e30       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x0000000010001e30                float_table_shim_on_use_helper
  .text.__wrap_malloc
-                0x0000000010001d1c       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x0000000010001d1c                __wrap_malloc
+                0x0000000010001e5c       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x0000000010001e5c                __wrap_malloc
  .text.__wrap_free
-                0x0000000010001d40        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-                0x0000000010001d40                __wrap_free
- .text          0x0000000010001d48       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010001d48                __aeabi_mem_init
- .text.memset   0x0000000010001d58        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010001d58                __wrap_memset
- .text.memcpy   0x0000000010001d64        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010001d64                __wrap___aeabi_memcpy
-                0x0000000010001d64                __wrap_memcpy
+                0x0000000010001e80        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x0000000010001e80                __wrap_free
+ .text          0x0000000010001e88       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010001e88                __aeabi_mem_init
+ .text.memset   0x0000000010001e98        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010001e98                __wrap_memset
+ .text.memcpy   0x0000000010001ea4        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010001ea4                __wrap___aeabi_memcpy
+                0x0000000010001ea4                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010001d70       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001eb0       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010001d80       0xb4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001ec0       0xb4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x0000000010001e34       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010001f74       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x0000000010001f30       0xa0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010001f30                __wrap_putchar
+                0x0000000010002070       0xa0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010002070                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010001fd0       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010001fd0                __wrap_puts
+                0x0000000010002110       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010002110                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x000000001000200c       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000200c                stdio_set_driver_enabled
+                0x000000001000214c       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000214c                stdio_set_driver_enabled
  .text.stdio_init_all
-                0x000000001000203c        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000203c                stdio_init_all
+                0x000000001000217c        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000217c                stdio_init_all
  .text.stdio_uart_out_chars
-                0x0000000010002044       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010002184       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x0000000010002090       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010002090                stdio_uart_in_chars
+                0x00000000100021d0       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100021d0                stdio_uart_in_chars
  .text.stdio_uart_init
-                0x00000000100020c8       0x48 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x00000000100020c8                stdio_uart_init
+                0x0000000010002208       0x48 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010002208                stdio_uart_init
+ .text.stdio_uart_init_full
+                0x0000000010002250       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010002250                stdio_uart_init_full
  .text.i2c_set_baudrate
-                0x0000000010002110       0xc4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010002110                i2c_set_baudrate
+                0x0000000010002288       0xc4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010002288                i2c_set_baudrate
  .text.i2c_init
-                0x00000000100021d4       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x00000000100021d4                i2c_init
+                0x000000001000234c       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x000000001000234c                i2c_init
  .text.i2c_write_blocking
-                0x0000000010002228       0xd0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x0000000010002228                i2c_write_blocking
+                0x00000000100023a0       0xd0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x00000000100023a0                i2c_write_blocking
+ .text.dcd_rp2040_irq
+                0x0000000010002470      0x21c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .text.dcd_int_enable
+                0x000000001000268c        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000268c                dcd_int_enable
  .text.dcd_set_address
-                0x00000000100022f8       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100022f8                dcd_set_address
+                0x0000000010002698       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010002698                dcd_set_address
+ .text.dcd_connect
+                0x00000000100026ac       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100026ac                dcd_connect
+ .text.dcd_init
+                0x00000000100026bc      0x144 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100026bc                dcd_init
  .text.dcd_edpt0_status_complete
-                0x000000001000230c       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000230c                dcd_edpt0_status_complete
+                0x0000000010002800       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010002800                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x0000000010002328       0xf0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010002328                dcd_edpt_open
+                0x000000001000281c       0xf0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000281c                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x0000000010002418       0xbc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010002418                dcd_edpt_close_all
+                0x000000001000290c       0xbc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000290c                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x00000000100024d4       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100024d4                dcd_edpt_xfer
+                0x00000000100029c8       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100029c8                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x00000000100024f8       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100024f8                dcd_edpt_stall
+                0x00000000100029ec       0x38 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100029ec                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x0000000010002530       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010002530                dcd_edpt_clear_stall
+                0x0000000010002a24       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010002a24                dcd_edpt_clear_stall
  .text._hw_endpoint_buffer_control_update32.part.0.isra.0
-                0x0000000010002560       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002a54       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ .text.rp2040_usb_init
+                0x0000000010002a70       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002a70                rp2040_usb_init
+ .text.hw_endpoint_reset_transfer
+                0x0000000010002abc        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002abc                hw_endpoint_reset_transfer
  .text._hw_endpoint_buffer_control_update32
-                0x000000001000257c       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000257c                _hw_endpoint_buffer_control_update32
+                0x0000000010002ac8       0x44 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002ac8                _hw_endpoint_buffer_control_update32
  .text.hw_endpoint_xfer_start
-                0x00000000100025c0      0x138 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x00000000100025c0                hw_endpoint_xfer_start
+                0x0000000010002b0c      0x138 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002b0c                hw_endpoint_xfer_start
+ .text.hw_endpoint_xfer_continue
+                0x0000000010002c44      0x1e4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010002c44                hw_endpoint_xfer_continue
  .text.tud_inited
-                0x00000000100026f8        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100026f8                tud_inited
+                0x0000000010002e28        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010002e28                tud_inited
+ .text.tud_init
+                0x0000000010002e34       0xd8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010002e34                tud_init
  .text.tud_task
-                0x0000000010002704      0x8ec CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010002704                tud_task
+                0x0000000010002f0c      0x8ec CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010002f0c                tud_task
+ .text.dcd_event_bus_signal
+                0x00000000100037f8      0x120 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100037f8                dcd_event_bus_signal
+ .text.dcd_event_bus_reset
+                0x0000000010003918       0x54 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010003918                dcd_event_bus_reset
+ .text.dcd_event_setup_received
+                0x000000001000396c       0x50 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000396c                dcd_event_setup_received
+ .text.dcd_event_xfer_complete
+                0x00000000100039bc       0x68 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100039bc                dcd_event_xfer_complete
  .text.usbd_edpt_open
-                0x0000000010002ff0       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010002ff0                usbd_edpt_open
+                0x0000000010003a24       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010003a24                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x0000000010003020       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010003020                usbd_edpt_claim
+                0x0000000010003a54       0x64 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010003a54                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x0000000010003084       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010003084                usbd_edpt_release
+                0x0000000010003ab8       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010003ab8                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x00000000100030d0       0x48 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100030d0                usbd_edpt_xfer
+                0x0000000010003b04       0x48 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010003b04                usbd_edpt_xfer
  .text.tud_control_status
-                0x0000000010003118       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003118                tud_control_status
+                0x0000000010003b4c       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003b4c                tud_control_status
  .text.tud_control_xfer
-                0x0000000010003148       0xbc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003148                tud_control_xfer
+                0x0000000010003b7c       0xbc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003b7c                tud_control_xfer
  .text.usbd_control_reset
-                0x0000000010003204       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003204                usbd_control_reset
+                0x0000000010003c38       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003c38                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x0000000010003218        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003218                usbd_control_set_complete_callback
+                0x0000000010003c4c        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003c4c                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x0000000010003224       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003224                usbd_control_set_request
+                0x0000000010003c58       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003c58                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x0000000010003240       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010003240                usbd_control_xfer_cb
+                0x0000000010003c74       0xfc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010003c74                usbd_control_xfer_cb
  .text.tud_midi_n_available
-                0x000000001000333c       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x000000001000333c                tud_midi_n_available
+                0x0000000010003d70       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003d70                tud_midi_n_available
  .text.tud_midi_n_packet_read
-                0x0000000010003360       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x0000000010003360                tud_midi_n_packet_read
- .text.tud_midi_n_stream_write
-                0x00000000100033dc      0x1b0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x00000000100033dc                tud_midi_n_stream_write
+                0x0000000010003d94       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003d94                tud_midi_n_packet_read
  .text.midid_init
-                0x000000001000358c       0x5c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x000000001000358c                midid_init
+                0x0000000010003e10       0x5c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003e10                midid_init
  .text.midid_reset
-                0x00000000100035e8       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x00000000100035e8                midid_reset
+                0x0000000010003e6c       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003e6c                midid_reset
  .text.midid_open
-                0x000000001000360c      0x128 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x000000001000360c                midid_open
+                0x0000000010003e90      0x128 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003e90                midid_open
  .text.midid_control_xfer_cb
-                0x0000000010003734        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x0000000010003734                midid_control_xfer_cb
+                0x0000000010003fb8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003fb8                midid_control_xfer_cb
  .text.midid_xfer_cb
-                0x0000000010003738      0x108 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x0000000010003738                midid_xfer_cb
+                0x0000000010003fbc      0x108 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x0000000010003fbc                midid_xfer_cb
+ .text.tusb_init
+                0x00000000100040c4        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100040c4                tusb_init
  .text.tusb_inited
-                0x0000000010003840        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010003840                tusb_inited
+                0x00000000100040d0        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100040d0                tusb_inited
  .text.tu_edpt_validate
-                0x0000000010003848       0x78 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010003848                tu_edpt_validate
+                0x00000000100040d8       0x78 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100040d8                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x00000000100038c0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100038c0                tu_edpt_bind_driver
+                0x0000000010004150       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010004150                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x00000000100038ec       0x78 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100038ec                tu_fifo_config
+                0x000000001000417c       0x78 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000417c                tu_fifo_config
  .text.tu_fifo_count
-                0x0000000010003964       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010003964                tu_fifo_count
+                0x00000000100041f4       0x20 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100041f4                tu_fifo_count
  .text.tu_fifo_remaining
-                0x0000000010003984       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010003984                tu_fifo_remaining
+                0x0000000010004214       0x1c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010004214                tu_fifo_remaining
  .text.tu_fifo_read
-                0x00000000100039a0       0x9c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100039a0                tu_fifo_read
+                0x0000000010004230       0x9c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010004230                tu_fifo_read
  .text.tu_fifo_read_n
-                0x0000000010003a3c      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010003a3c                tu_fifo_read_n
+                0x00000000100042cc      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100042cc                tu_fifo_read_n
+ .text.tu_fifo_write
+                0x00000000100043cc       0x7c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100043cc                tu_fifo_write
  .text.tu_fifo_write_n
-                0x0000000010003b3c      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010003b3c                tu_fifo_write_n
+                0x0000000010004448      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010004448                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x0000000010003c3c       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010003c3c                tu_fifo_clear
- .text          0x0000000010003c88     0x11fc freertos/libfreertos.a(queue.c.obj)
-                0x0000000010003c88                xQueueGenericReset
-                0x0000000010003d28                xQueueGenericCreate
-                0x0000000010003dc0                xQueueGenericSend
-                0x00000000100040d8                xQueueGenericSendFromISR
-                0x00000000100041f0                xQueueGiveFromISR
-                0x000000001000425c                xQueueReceive
-                0x00000000100044fc                xQueueSemaphoreTake
-                0x0000000010004780                xQueuePeek
-                0x0000000010004a1c                xQueueReceiveFromISR
-                0x0000000010004aac                xQueuePeekFromISR
-                0x0000000010004aec                uxQueueMessagesWaiting
-                0x0000000010004b00                uxQueueSpacesAvailable
-                0x0000000010004b18                uxQueueMessagesWaitingFromISR
-                0x0000000010004b1c                vQueueDelete
-                0x0000000010004b9c                xQueueIsQueueEmptyFromISR
-                0x0000000010004ba4                xQueueIsQueueFullFromISR
-                0x0000000010004bb0                vQueueAddToRegistry
-                0x0000000010004cc8                pcQueueGetName
-                0x0000000010004d3c                vQueueUnregisterQueue
-                0x0000000010004db4                vQueueWaitForMessageRestricted
- .text          0x0000000010004e84     0x1530 freertos/libfreertos.a(tasks.c.obj)
-                0x0000000010005060                xTaskCreate
-                0x000000001000528c                vTaskDelete
-                0x0000000010005324                uxTaskPriorityGet
-                0x0000000010005344                uxTaskPriorityGetFromISR
-                0x0000000010005364                vTaskPrioritySet
-                0x0000000010005420                vTaskSuspend
-                0x0000000010005560                vTaskResume
-                0x00000000100055e4                xTaskResumeFromISR
-                0x0000000010005684                vTaskStartScheduler
-                0x00000000100057f0                vTaskEndScheduler
-                0x0000000010005804                vTaskSuspendAll
-                0x0000000010005814                xTaskResumeAll
-                0x0000000010005948                xTaskDelayUntil
-                0x00000000100059c4                vTaskDelay
-                0x0000000010005a18                xTaskGetTickCount
-                0x0000000010005a24                xTaskGetTickCountFromISR
-                0x0000000010005a30                uxTaskGetNumberOfTasks
-                0x0000000010005a3c                pcTaskGetName
-                0x0000000010005a50                xTaskCatchUpTicks
-                0x0000000010005a7c                xTaskIncrementTick
-                0x0000000010005aa0                vTaskSwitchContext
-                0x0000000010005b44                vTaskPlaceOnEventList
-                0x0000000010005bb8                vTaskPlaceOnUnorderedEventList
-                0x0000000010005c54                vTaskPlaceOnEventListRestricted
-                0x0000000010005cf0                xTaskRemoveFromEventList
-                0x0000000010005db8                vTaskRemoveFromUnorderedEventList
-                0x0000000010005e4c                vTaskSetTimeOutState
-                0x0000000010005e68                vTaskInternalSetTimeOutState
-                0x0000000010005e78                xTaskCheckForTimeOut
-                0x0000000010005ec8                vTaskMissedYield
-                0x0000000010005ed4                vTaskSetThreadLocalStoragePointer
-                0x0000000010005ef0                pvTaskGetThreadLocalStoragePointer
-                0x0000000010005f10                xTaskGetCurrentTaskHandle
-                0x0000000010005f1c                xTaskGetSchedulerState
-                0x0000000010005f34                uxTaskResetEventItemValue
-                0x0000000010005f4c                ulTaskGenericNotifyTake
-                0x0000000010005fc8                xTaskGenericNotifyWait
-                0x0000000010006064                xTaskGenericNotify
-                0x000000001000614c                xTaskGenericNotifyFromISR
-                0x0000000010006274                vTaskGenericNotifyGiveFromISR
-                0x0000000010006354                xTaskGenericNotifyStateClear
-                0x0000000010006384                ulTaskGenericNotifyValueClear
- .text          0x00000000100063b4      0x534 freertos/libfreertos.a(timers.c.obj)
-                0x00000000100066cc                xTimerCreateTimerTask
-                0x0000000010006740                xTimerCreate
-                0x00000000100067e8                xTimerGenericCommand
-                0x000000001000683c                xTimerGetTimerDaemonTaskHandle
-                0x0000000010006848                xTimerGetPeriod
-                0x000000001000684c                vTimerSetReloadMode
-                0x0000000010006870                xTimerGetReloadMode
-                0x0000000010006888                uxTimerGetReloadMode
-                0x00000000100068a0                xTimerGetExpiryTime
-                0x00000000100068a4                pcTimerGetName
-                0x00000000100068a8                xTimerIsTimerActive
-                0x00000000100068c0                pvTimerGetTimerID
-                0x00000000100068d4                vTimerSetTimerID
- .text          0x00000000100068e8       0x30 freertos/libfreertos.a(heap_3.c.obj)
-                0x00000000100068e8                pvPortMalloc
-                0x0000000010006900                vPortFree
- *fill*         0x0000000010006918        0x8 
- .text          0x0000000010006920      0x194 freertos/libfreertos.a(port.c.obj)
-                0x0000000010006964                pxPortInitialiseStack
-                0x0000000010006984                isr_svcall
-                0x0000000010006988                vPortEndScheduler
-                0x000000001000698c                vPortYield
-                0x00000000100069a4                vPortEnterCritical
-                0x00000000100069bc                vPortExitCritical
-                0x00000000100069d0                ulSetInterruptMaskFromISR
-                0x00000000100069d8                vClearInterruptMaskFromISR
-                0x00000000100069e0                isr_pendsv
-                0x0000000010006a24                isr_systick
-                0x0000000010006a48                vPortSetupTimerInterrupt
-                0x0000000010006a70                xPortStartScheduler
- .text          0x0000000010006ab4       0x8c freertos/libfreertos.a(list.c.obj)
-                0x0000000010006ab4                vListInitialise
-                0x0000000010006acc                vListInitialiseItem
-                0x0000000010006ad4                vListInsertEnd
-                0x0000000010006aec                vListInsert
-                0x0000000010006b1c                uxListRemove
+                0x0000000010004548       0x4c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010004548                tu_fifo_clear
+ .text.board_init
+                0x0000000010004594       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x0000000010004594                board_init
+ .text          0x00000000100045c4     0x11fc freertos/libfreertos.a(queue.c.obj)
+                0x00000000100045c4                xQueueGenericReset
+                0x0000000010004664                xQueueGenericCreate
+                0x00000000100046fc                xQueueGenericSend
+                0x0000000010004a14                xQueueGenericSendFromISR
+                0x0000000010004b2c                xQueueGiveFromISR
+                0x0000000010004b98                xQueueReceive
+                0x0000000010004e38                xQueueSemaphoreTake
+                0x00000000100050bc                xQueuePeek
+                0x0000000010005358                xQueueReceiveFromISR
+                0x00000000100053e8                xQueuePeekFromISR
+                0x0000000010005428                uxQueueMessagesWaiting
+                0x000000001000543c                uxQueueSpacesAvailable
+                0x0000000010005454                uxQueueMessagesWaitingFromISR
+                0x0000000010005458                vQueueDelete
+                0x00000000100054d8                xQueueIsQueueEmptyFromISR
+                0x00000000100054e0                xQueueIsQueueFullFromISR
+                0x00000000100054ec                vQueueAddToRegistry
+                0x0000000010005604                pcQueueGetName
+                0x0000000010005678                vQueueUnregisterQueue
+                0x00000000100056f0                vQueueWaitForMessageRestricted
+ .text          0x00000000100057c0     0x1530 freertos/libfreertos.a(tasks.c.obj)
+                0x000000001000599c                xTaskCreate
+                0x0000000010005bc8                vTaskDelete
+                0x0000000010005c60                uxTaskPriorityGet
+                0x0000000010005c80                uxTaskPriorityGetFromISR
+                0x0000000010005ca0                vTaskPrioritySet
+                0x0000000010005d5c                vTaskSuspend
+                0x0000000010005e9c                vTaskResume
+                0x0000000010005f20                xTaskResumeFromISR
+                0x0000000010005fc0                vTaskStartScheduler
+                0x000000001000612c                vTaskEndScheduler
+                0x0000000010006140                vTaskSuspendAll
+                0x0000000010006150                xTaskResumeAll
+                0x0000000010006284                xTaskDelayUntil
+                0x0000000010006300                vTaskDelay
+                0x0000000010006354                xTaskGetTickCount
+                0x0000000010006360                xTaskGetTickCountFromISR
+                0x000000001000636c                uxTaskGetNumberOfTasks
+                0x0000000010006378                pcTaskGetName
+                0x000000001000638c                xTaskCatchUpTicks
+                0x00000000100063b8                xTaskIncrementTick
+                0x00000000100063dc                vTaskSwitchContext
+                0x0000000010006480                vTaskPlaceOnEventList
+                0x00000000100064f4                vTaskPlaceOnUnorderedEventList
+                0x0000000010006590                vTaskPlaceOnEventListRestricted
+                0x000000001000662c                xTaskRemoveFromEventList
+                0x00000000100066f4                vTaskRemoveFromUnorderedEventList
+                0x0000000010006788                vTaskSetTimeOutState
+                0x00000000100067a4                vTaskInternalSetTimeOutState
+                0x00000000100067b4                xTaskCheckForTimeOut
+                0x0000000010006804                vTaskMissedYield
+                0x0000000010006810                vTaskSetThreadLocalStoragePointer
+                0x000000001000682c                pvTaskGetThreadLocalStoragePointer
+                0x000000001000684c                xTaskGetCurrentTaskHandle
+                0x0000000010006858                xTaskGetSchedulerState
+                0x0000000010006870                uxTaskResetEventItemValue
+                0x0000000010006888                ulTaskGenericNotifyTake
+                0x0000000010006904                xTaskGenericNotifyWait
+                0x00000000100069a0                xTaskGenericNotify
+                0x0000000010006a88                xTaskGenericNotifyFromISR
+                0x0000000010006bb0                vTaskGenericNotifyGiveFromISR
+                0x0000000010006c90                xTaskGenericNotifyStateClear
+                0x0000000010006cc0                ulTaskGenericNotifyValueClear
+ .text          0x0000000010006cf0      0x534 freertos/libfreertos.a(timers.c.obj)
+                0x0000000010007008                xTimerCreateTimerTask
+                0x000000001000707c                xTimerCreate
+                0x0000000010007124                xTimerGenericCommand
+                0x0000000010007178                xTimerGetTimerDaemonTaskHandle
+                0x0000000010007184                xTimerGetPeriod
+                0x0000000010007188                vTimerSetReloadMode
+                0x00000000100071ac                xTimerGetReloadMode
+                0x00000000100071c4                uxTimerGetReloadMode
+                0x00000000100071dc                xTimerGetExpiryTime
+                0x00000000100071e0                pcTimerGetName
+                0x00000000100071e4                xTimerIsTimerActive
+                0x00000000100071fc                pvTimerGetTimerID
+                0x0000000010007210                vTimerSetTimerID
+ .text          0x0000000010007224       0x30 freertos/libfreertos.a(heap_3.c.obj)
+                0x0000000010007224                pvPortMalloc
+                0x000000001000723c                vPortFree
+ *fill*         0x0000000010007254        0xc 
+ .text          0x0000000010007260      0x194 freertos/libfreertos.a(port.c.obj)
+                0x00000000100072a4                pxPortInitialiseStack
+                0x00000000100072c4                isr_svcall
+                0x00000000100072c8                vPortEndScheduler
+                0x00000000100072cc                vPortYield
+                0x00000000100072e4                vPortEnterCritical
+                0x00000000100072fc                vPortExitCritical
+                0x0000000010007310                ulSetInterruptMaskFromISR
+                0x0000000010007318                vClearInterruptMaskFromISR
+                0x0000000010007320                isr_pendsv
+                0x0000000010007364                isr_systick
+                0x0000000010007388                vPortSetupTimerInterrupt
+                0x00000000100073b0                xPortStartScheduler
+ .text          0x00000000100073f4       0x8c freertos/libfreertos.a(list.c.obj)
+                0x00000000100073f4                vListInitialise
+                0x000000001000740c                vListInitialiseItem
+                0x0000000010007414                vListInsertEnd
+                0x000000001000742c                vListInsert
+                0x000000001000745c                uxListRemove
  .text.buttons_pooling
-                0x0000000010006b40      0x260 components/controls/libcontrols.a(controls.c.obj)
-                0x0000000010006b40                buttons_pooling
+                0x0000000010007480      0x260 components/controls/libcontrols.a(controls.c.obj)
+                0x0000000010007480                buttons_pooling
  .text.buttons_init
-                0x0000000010006da0       0x30 components/controls/libcontrols.a(controls.c.obj)
-                0x0000000010006da0                buttons_init
+                0x00000000100076e0       0x30 components/controls/libcontrols.a(controls.c.obj)
+                0x00000000100076e0                buttons_init
  .text.send_to_lcd
-                0x0000000010006dd0       0x5c components/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006dd0                send_to_lcd
+                0x0000000010007710       0x5c components/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010007710                send_to_lcd
  .text.lcd_init
-                0x0000000010006e2c       0x38 components/lcd/liblcd.a(lcd.c.obj)
-                0x0000000010006e2c                lcd_init
+                0x000000001000776c       0x38 components/lcd/liblcd.a(lcd.c.obj)
+                0x000000001000776c                lcd_init
+ .text.midi_init
+                0x00000000100077a4        0xc components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077a4                midi_init
  .text.tud_mount_cb
-                0x0000000010006e64       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000010006e64                tud_mount_cb
+                0x00000000100077b0       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077b0                tud_mount_cb
  .text.tud_umount_cb
-                0x0000000010006e74        0xc components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000010006e74                tud_umount_cb
+                0x00000000100077c0        0xc components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077c0                tud_umount_cb
  .text.tud_suspend_cb
-                0x0000000010006e80       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000010006e80                tud_suspend_cb
+                0x00000000100077cc       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077cc                tud_suspend_cb
  .text.tud_resume_cb
-                0x0000000010006e90       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000010006e90                tud_resume_cb
+                0x00000000100077dc       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077dc                tud_resume_cb
  .text.midi_send
-                0x0000000010006ea0       0x8c components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000010006ea0                midi_send
+                0x00000000100077ec       0x20 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000100077ec                midi_send
+ .text.led_interval
+                0x000000001000780c        0xc components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x000000001000780c                led_interval
  .text.tud_descriptor_device_cb
-                0x0000000010006f2c        0x8 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000010006f2c                tud_descriptor_device_cb
+                0x0000000010007818        0x8 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000010007818                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x0000000010006f34        0x8 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000010006f34                tud_descriptor_configuration_cb
+                0x0000000010007820        0x8 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000010007820                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x0000000010006f3c       0x80 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000010006f3c                tud_descriptor_string_cb
- .text          0x0000000010006fbc       0x60 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-itoa.o)
-                0x0000000010006fbc                __itoa
-                0x0000000010006fec                itoa
- .text          0x000000001000701c       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000001000701c                malloc
-                0x0000000010007030                free
- .text          0x0000000010007044      0x574 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000010007044                _malloc_r
- .text          0x00000000100075b8        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
-                0x00000000100075b8                __malloc_lock
-                0x00000000100075bc                __malloc_unlock
- .text          0x00000000100075c0       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x00000000100075c0                _sbrk_r
- .text          0x00000000100075e4       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x00000000100075e4                strlen
- .text          0x0000000010007640       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
-                0x0000000010007640                __utoa
-                0x00000000100076c0                utoa
- .text          0x00000000100076c8      0x260 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
-                0x00000000100076c8                _malloc_trim_r
-                0x0000000010007764                _free_r
+                0x0000000010007828       0x80 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000010007828                tud_descriptor_string_cb
+ .text          0x00000000100078a8       0x60 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-itoa.o)
+                0x00000000100078a8                __itoa
+                0x00000000100078d8                itoa
+ .text          0x0000000010007908       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
+                0x0000000010007908                malloc
+                0x000000001000791c                free
+ .text          0x0000000010007930      0x574 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000010007930                _malloc_r
+ .text          0x0000000010007ea4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
+                0x0000000010007ea4                __malloc_lock
+                0x0000000010007ea8                __malloc_unlock
+ .text          0x0000000010007eac       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x0000000010007eac                _sbrk_r
+ .text          0x0000000010007ed0       0x5c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000010007ed0                strlen
+ .text          0x0000000010007f2c       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
+                0x0000000010007f2c                __utoa
+                0x0000000010007fac                utoa
+ .text          0x0000000010007fb4      0x260 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
+                0x0000000010007fb4                _malloc_trim_r
+                0x0000000010008050                _free_r
  *(.fini)
- .fini          0x0000000010007928        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000010007928                _fini
- *fill*         0x000000001000792c        0x4 
- .fini.__stub   0x0000000010007930       0x50 linker stubs
+ .fini          0x0000000010008214        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010008214                _fini
+ .fini.__stub   0x0000000010008218       0x50 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2077,142 +2076,150 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010007980        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010007980                . = ALIGN (0x4)
+ .eh_frame      0x0000000010008268        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010008268                . = ALIGN (0x4)
 
-.glue_7         0x0000000010007980        0x0
- .glue_7        0x0000000010007980        0x0 linker stubs
+.glue_7         0x0000000010008268        0x0
+ .glue_7        0x0000000010008268        0x0 linker stubs
 
-.glue_7t        0x0000000010007980        0x0
- .glue_7t       0x0000000010007980        0x0 linker stubs
+.glue_7t        0x0000000010008268        0x0
+ .glue_7t       0x0000000010008268        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010007980        0x0
- .vfp11_veneer  0x0000000010007980        0x0 linker stubs
+.vfp11_veneer   0x0000000010008268        0x0
+ .vfp11_veneer  0x0000000010008268        0x0 linker stubs
 
-.v4_bx          0x0000000010007980        0x0
- .v4_bx         0x0000000010007980        0x0 linker stubs
+.v4_bx          0x0000000010008268        0x0
+ .v4_bx         0x0000000010008268        0x0 linker stubs
 
-.iplt           0x0000000010007980        0x0
- .iplt          0x0000000010007980        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010008268        0x0
+ .iplt          0x0000000010008268        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010007980      0x324
+.rodata         0x0000000010008268      0x388
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x0000000010007980       0x39 CMakeFiles/main.dir/main.c.obj
- *fill*         0x00000000100079b9        0x3 
+                0x0000000010008268       0x42 CMakeFiles/main.dir/main.c.obj
+ *fill*         0x00000000100082aa        0x2 
+ .rodata.spin_lock_claim_unused.str1.4
+                0x00000000100082ac       0x1b CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x00000000100082c7        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x00000000100079bc       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100079de        0x2 
+                0x00000000100082c8       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100082ea        0x2 
  .rodata.panic.str1.4
-                0x00000000100079e0       0x12 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x00000000100079f2        0x2 
+                0x00000000100082ec       0x12 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x00000000100082fe        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x00000000100079f4        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010008300        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.__wrap_malloc.str1.4
-                0x0000000010007a00        0xe CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- *fill*         0x0000000010007a0e        0x2 
+                0x000000001000830c        0xe CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ *fill*         0x000000001000831a        0x2 
  .rodata.str1.4
-                0x0000000010007a10       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000831c       0x3c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x0000000010007a4c        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008358        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010007a58        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008364        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010007a64        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008370        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x0000000010007a70        0x2 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x0000000010007a72        0x2 
+                0x000000001000837c        0x2 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001000837e        0x2 
  .rodata.str1.4
-                0x0000000010007a74       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008380       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_28.4
-                0x0000000010007aa0        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100083ac        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_29.5
-                0x0000000010007aac        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100083b8        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .rodata.dcd_rp2040_irq.str1.4
+                0x00000000100083c0       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata._hw_endpoint_buffer_control_update32.part.0.isra.0.str1.4
-                0x0000000010007ab4       0x1f CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00000000100083d4       0x1f CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x00000000100083f3        0x1 
+ .rodata.hw_endpoint_xfer_continue.str1.4
+                0x00000000100083f4       0x29 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .rodata.str1.4
-                0x0000000010007ad3       0x1f CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x000000001000841d       0x29 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                           0x7 (size before relaxing)
- *fill*         0x0000000010007ad3        0x1 
+ *fill*         0x000000001000841d        0x3 
  .rodata.tud_task
-                0x0000000010007ad4       0x8c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010008420       0x8c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x0000000010007b60       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100084ac       0x18 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.str1.4
-                0x0000000010007b78        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x00000000100084c4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .rodata.__bi_121.0
-                0x0000000010007b7c        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x00000000100084c8        0xc CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .rodata.__bi_131.1
-                0x0000000010007b88        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
- .rodata        0x0000000010007b90       0x28 freertos/libfreertos.a(timers.c.obj)
+                0x00000000100084d4        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+ .rodata        0x00000000100084dc       0x28 freertos/libfreertos.a(timers.c.obj)
  .rodata.str1.4
-                0x0000000010007bb8       0x10 freertos/libfreertos.a(timers.c.obj)
+                0x0000000010008504       0x10 freertos/libfreertos.a(timers.c.obj)
  .rodata.__bi_32.0
-                0x0000000010007bc8        0x8 components/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010008514        0x8 components/lcd/liblcd.a(lcd.c.obj)
  .rodata.str1.4
-                0x0000000010007bd0       0x2b components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
- *fill*         0x0000000010007bfb        0x1 
+                0x000000001000851c       0x2b components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+ *fill*         0x0000000010008547        0x1 
  .rodata.__compound_literal.0
-                0x0000000010007bfc        0x2 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
- *fill*         0x0000000010007bfe        0x2 
+                0x0000000010008548        0x2 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+ *fill*         0x000000001000854a        0x2 
  .rodata.desc_device
-                0x0000000010007c00       0x12 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000010007c00                desc_device
- *fill*         0x0000000010007c12        0x2 
+                0x000000001000854c       0x12 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x000000001000854c                desc_device
+ *fill*         0x000000001000855e        0x2 
  .rodata.desc_fs_configuration
-                0x0000000010007c14       0x65 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000010007c14                desc_fs_configuration
- *fill*         0x0000000010007c79        0x3 
+                0x0000000010008560       0x65 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000010008560                desc_fs_configuration
+ *fill*         0x00000000100085c5        0x3 
  .rodata.str1.4
-                0x0000000010007c7c       0x25 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
-                0x0000000010007ca4                . = ALIGN (0x4)
- *fill*         0x0000000010007ca1        0x3 
+                0x00000000100085c8       0x25 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
+                0x00000000100085f0                . = ALIGN (0x4)
+ *fill*         0x00000000100085ed        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x0000000010007ca4                . = ALIGN (0x4)
+                0x00000000100085f0                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000010007ca4        0x0
- .rel.iplt      0x0000000010007ca4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x00000000100085f0        0x0
+ .rel.iplt      0x00000000100085f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000010007ca4                __exidx_start = .
+                0x00000000100085f0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000010007ca4                __exidx_end = .
-                0x0000000010007ca4                . = ALIGN (0x4)
-                0x0000000010007ca4                __binary_info_start = .
+                0x00000000100085f0                __exidx_end = .
+                0x00000000100085f0                . = ALIGN (0x4)
+                0x00000000100085f0                __binary_info_start = .
 
-.binary_info    0x0000000010007ca4       0x30
+.binary_info    0x00000000100085f0       0x30
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x0000000010007ca4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100085f0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x0000000010007ca8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100085f4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x0000000010007cac        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100085f8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x0000000010007cb0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100085fc        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x0000000010007cb4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008600        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x0000000010007cb8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008604        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x0000000010007cbc        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008608        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr121
-                0x0000000010007cc0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x000000001000860c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .binary_info.keep.__bi_ptr131
-                0x0000000010007cc4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x0000000010008610        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .binary_info.keep.__bi_ptr32
-                0x0000000010007cc8        0x4 components/lcd/liblcd.a(lcd.c.obj)
+                0x0000000010008614        0x4 components/lcd/liblcd.a(lcd.c.obj)
  *(.binary_info.*)
  .binary_info.__bi_ptr28
-                0x0000000010007ccc        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008618        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr29
-                0x0000000010007cd0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010007cd4                __binary_info_end = .
-                0x0000000010007cd4                . = ALIGN (0x4)
-                0x0000000010007cd4                __etext = .
+                0x000000001000861c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008620                __binary_info_end = .
+                0x0000000010008620                . = ALIGN (0x4)
+                0x0000000010008620                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2221,7 +2228,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
                 0x0000000020000000       0xc0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0xadc load address 0x0000000010007cd4
+.data           0x00000000200000c0      0xaf4 load address 0x0000000010008620
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2278,181 +2285,191 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  .data.ep_dir_string
                 0x000000002000030c        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                 0x000000002000030c                ep_dir_string
- .data          0x0000000020000314        0x4 freertos/libfreertos.a(tasks.c.obj)
-                0x0000000020000314                uxTopUsedPriority
- .data          0x0000000020000318        0x4 freertos/libfreertos.a(port.c.obj)
+ .data._usbd_qdef
+                0x0000000020000314       0x24 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020000314                _usbd_qdef
+ .data          0x0000000020000338        0x4 freertos/libfreertos.a(tasks.c.obj)
+                0x0000000020000338                uxTopUsedPriority
+ .data          0x000000002000033c        0x4 freertos/libfreertos.a(port.c.obj)
  .data.blink_interval_ms
-                0x000000002000031c        0x4 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
- .data.notes    0x0000000020000320       0x10 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
-                0x0000000020000320                notes
+                0x0000000020000340        0x4 components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .data.string_desc_arr
-                0x0000000020000330       0x10 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
-                0x0000000020000330                string_desc_arr
- .data          0x0000000020000340      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
-                0x0000000020000340                _impure_ptr
- .data          0x0000000020000770      0x410 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x0000000020000770                __malloc_sbrk_base
-                0x0000000020000774                __malloc_trim_threshold
-                0x0000000020000778                __malloc_av_
-                0x0000000020000b80                . = ALIGN (0x4)
+                0x0000000020000344       0x10 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000020000344                string_desc_arr
+ *fill*         0x0000000020000354        0x4 
+ .data          0x0000000020000358      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000020000358                _impure_ptr
+ .data          0x0000000020000788      0x410 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020000788                __malloc_sbrk_base
+                0x000000002000078c                __malloc_trim_threshold
+                0x0000000020000790                __malloc_av_
+                0x0000000020000b98                . = ALIGN (0x4)
  *(.after_data.*)
-                0x0000000020000b80                . = ALIGN (0x4)
-                0x0000000020000b80                PROVIDE (__mutex_array_start = .)
+                0x0000000020000b98                . = ALIGN (0x4)
+                0x0000000020000b98                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x0000000020000b80        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000020000b88                PROVIDE (__mutex_array_end = .)
-                0x0000000020000b88                . = ALIGN (0x4)
-                0x0000000020000b88                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x0000000020000b98        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000ba0                PROVIDE (__mutex_array_end = .)
+                0x0000000020000ba0                . = ALIGN (0x4)
+                0x0000000020000ba0                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x0000000020000b88        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000ba0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x0000000020000b8c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000ba4        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000b90        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000020000ba8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000b94        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000020000bac        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x0000000020000b98                PROVIDE (__preinit_array_end = .)
-                0x0000000020000b98                . = ALIGN (0x4)
-                0x0000000020000b98                PROVIDE (__init_array_start = .)
+                0x0000000020000bb0                PROVIDE (__preinit_array_end = .)
+                0x0000000020000bb0                . = ALIGN (0x4)
+                0x0000000020000bb0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000020000b98        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000020000b9c                PROVIDE (__init_array_end = .)
-                0x0000000020000b9c                . = ALIGN (0x4)
-                0x0000000020000b9c                PROVIDE (__fini_array_start = .)
+ .init_array    0x0000000020000bb0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020000bb4                PROVIDE (__init_array_end = .)
+                0x0000000020000bb4                . = ALIGN (0x4)
+                0x0000000020000bb4                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
-                0x0000000020000b9c                PROVIDE (__fini_array_end = .)
+                0x0000000020000bb4                PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x0000000020000b9c                . = ALIGN (0x4)
-                0x0000000020000b9c                __data_end__ = .
+                0x0000000020000bb4                . = ALIGN (0x4)
+                0x0000000020000bb4                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020000b9c        0x0 load address 0x00000000100087b0
+                0x0000000020000bb4        0x0 load address 0x0000000010009114
  .tm_clone_table
-                0x0000000020000b9c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020000bb4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x0000000020000b9c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
+                0x0000000020000bb4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000b9c        0x0 load address 0x00000000100087b0
- .igot.plt      0x0000000020000b9c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x0000000020000bb4        0x0 load address 0x0000000010009114
+ .igot.plt      0x0000000020000bb4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000b9c        0x0 load address 0x00000000100087b0
-                0x0000000020000b9c                . = ALIGN (0x4)
+                0x0000000020000bb4        0x0 load address 0x0000000010009114
+                0x0000000020000bb4                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x00000000100087b0
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010009114
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x00000000100087b0                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010009114                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x00000000100087b0
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010009114
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x00000000100087b0                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010009114                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x0000000020000ba0      0xbf8
-                0x0000000020000ba0                . = ALIGN (0x4)
-                0x0000000020000ba0                __bss_start__ = .
+.bss            0x0000000020000bb8      0xcc8
+                0x0000000020000bb8                . = ALIGN (0x4)
+                0x0000000020000bb8                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
- .bss           0x0000000020000ba0       0x50 freertos/libfreertos.a(queue.c.obj)
-                0x0000000020000ba0                xQueueRegistry
+ .bss           0x0000000020000bb8       0x50 freertos/libfreertos.a(queue.c.obj)
+                0x0000000020000bb8                xQueueRegistry
  .bss.default_alarm_pool_entries
-                0x0000000020000bf0      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
- .bss.sd_table  0x0000000020000cf0      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020000cf0                sd_table
- .bss.sf_table  0x0000000020000df0      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000020000df0                sf_table
- .bss           0x0000000020000ef0       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
- .bss           0x0000000020000f0c      0x104 freertos/libfreertos.a(tasks.c.obj)
-                0x0000000020000f90                pxCurrentTCB
- .bss           0x0000000020001010       0x3c freertos/libfreertos.a(timers.c.obj)
- .bss           0x000000002000104c       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x000000002000104c                __malloc_top_pad
-                0x0000000020001050                __malloc_current_mallinfo
-                0x0000000020001078                __malloc_max_sbrked_mem
-                0x000000002000107c                __malloc_max_total_mem
- .bss           0x0000000020001080        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reent.o)
-                0x0000000020001080                errno
+                0x0000000020000c08      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.sd_table  0x0000000020000d08      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020000d08                sd_table
+ .bss.sf_table  0x0000000020000e08      0x100 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000020000e08                sf_table
+ .bss           0x0000000020000f08       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .bss           0x0000000020000f24      0x104 freertos/libfreertos.a(tasks.c.obj)
+                0x0000000020000fa8                pxCurrentTCB
+ .bss           0x0000000020001028       0x3c freertos/libfreertos.a(timers.c.obj)
+ .bss           0x0000000020001064       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x0000000020001064                __malloc_top_pad
+                0x0000000020001068                __malloc_current_mallinfo
+                0x0000000020001090                __malloc_max_sbrked_mem
+                0x0000000020001094                __malloc_max_total_mem
+ .bss           0x0000000020001098        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reent.o)
+                0x0000000020001098                errno
  .bss._app_driver
-                0x0000000020001084        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000002000109c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._ctrl_xfer
-                0x0000000020001088       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00000000200010a0       0x14 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._desc_str
-                0x000000002000109c       0x40 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x00000000200010b4       0x40 components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
  .bss._midid_itf
-                0x00000000200010dc      0x158 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
-                0x00000000200010dc                _midid_itf
+                0x00000000200010f4      0x158 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x00000000200010f4                _midid_itf
+ .bss._ubsd_mutexdef
+                0x000000002000124c        0x8 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_ctrl_buf
-                0x0000000020001234       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000020001254       0x40 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._usbd_dev
-                0x0000000020001274       0x53 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x00000000200012c7        0x1 
+                0x0000000020001294       0x53 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x00000000200012e7        0x1 
  .bss._usbd_mutex
-                0x00000000200012c8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._usbd_q   0x00000000200012cc        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200012e8        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss._usbd_q   0x00000000200012ec        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss._usbd_qdef_buf
+                0x00000000200012f0       0xc0 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200012f0                _usbd_qdef_buf
  .bss.alarm_callbacks
-                0x00000000200012d0       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000200013b0       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.claimed   0x00000000200013c0        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .bss.configured_freq
-                0x00000000200012e0       0x28 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x00000000200013c4       0x28 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x0000000020001308       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000200013ec       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x0000000020001318       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
- .bss.drivers   0x0000000020001348        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x000000002000134c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000200013fc       0x30 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.drivers   0x000000002000142c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x0000000020001430        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.heap_end.0
-                0x0000000020001350        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000020001434        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .bss.hw_endpoints
-                0x0000000020001354      0x400 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000020001438      0x400 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.lazy_vsnprintf
-                0x0000000020001754        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000020001838        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss.logic_queue
-                0x0000000020001758        0x4 CMakeFiles/main.dir/main.c.obj
-                0x0000000020001758                logic_queue
+                0x000000002000183c        0x4 CMakeFiles/main.dir/main.c.obj
+                0x000000002000183c                logic_queue
  .bss.next_buffer_ptr
-                0x000000002000175c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .bss.pools     0x0000000020001760       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020001840        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .bss.pools     0x0000000020001844       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.sf_clz_func
-                0x0000000020001770        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020001770                sf_clz_func
+                0x0000000020001854        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020001854                sf_clz_func
  .bss.sleep_notifier
-                0x0000000020001774        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020001858        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
  .bss.target_hi
-                0x0000000020001778       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000002000185c       0x10 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.uart_char_to_line_feed
-                0x0000000020001788        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000020001788                uart_char_to_line_feed
+                0x000000002000186c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x000000002000186c                uart_char_to_line_feed
+ .bss.uart_inst
+                0x0000000020001870        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .bss.uart_instance
-                0x000000002000178c        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000020001874        0x4 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .bss._app_driver_count
-                0x0000000020001790        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020001878        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_initialized
-                0x0000000020001791        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss.claimed   0x0000000020001792        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020001879        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss.claimed   0x000000002000187a        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020001793        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000002000187b        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x0000000020001794        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000002000187c        0x1 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x0000000020001798                . = ALIGN (0x4)
- *fill*         0x0000000020001795        0x3 
-                0x0000000020001798                __bss_end__ = .
+                0x0000000020001880                . = ALIGN (0x4)
+ *fill*         0x000000002000187d        0x3 
+                0x0000000020001880                __bss_end__ = .
 
-.heap           0x0000000020001798      0x800
-                0x0000000020001798                __end__ = .
-                0x0000000020001798                end = __end__
+.heap           0x0000000020001880      0x800
+                0x0000000020001880                __end__ = .
+                0x0000000020001880                end = __end__
  *(.heap*)
- .heap          0x0000000020001798      0x800 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x0000000020001f98                __HeapLimit = .
+ .heap          0x0000000020001880      0x800 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x0000000020002080                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -2461,8 +2478,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x00000000100087b0        0x0
-                0x00000000100087b0                __flash_binary_end = .
+.flash_end      0x0000000010009114        0x0
+                0x0000000010009114                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2542,7 +2559,7 @@ LOAD freertos/libfreertos.a
 LOAD components/controls/libcontrols.a
 LOAD components/lcd/liblcd.a
 LOAD components/midi_usb/libmidi_usb.a
-LOAD /tmp/ccUofhH0.o
+LOAD /tmp/cc6csdNL.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2590,115 +2607,117 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000224       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
  .ARM.attributes
-                0x0000000000000250       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000000000250       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .ARM.attributes
-                0x000000000000027c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000000000027c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
  .ARM.attributes
-                0x00000000000002a8       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x00000000000002a8       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .ARM.attributes
-                0x00000000000002d4       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x00000000000002d4       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .ARM.attributes
-                0x0000000000000300       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000000000300       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .ARM.attributes
-                0x000000000000032c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x000000000000032c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .ARM.attributes
-                0x0000000000000358       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000000000358       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
  .ARM.attributes
-                0x0000000000000384       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000000000384       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .ARM.attributes
-                0x00000000000003a6       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x00000000000003b0       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .ARM.attributes
-                0x00000000000003d2       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000000003d2       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
  .ARM.attributes
-                0x00000000000003f4       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000000003fe       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
  .ARM.attributes
-                0x0000000000000416       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000000000420       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .ARM.attributes
-                0x0000000000000442       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000000000442       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .ARM.attributes
-                0x0000000000000464       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x000000000000046e       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .ARM.attributes
-                0x0000000000000486       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000000000490       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
  .ARM.attributes
-                0x00000000000004a8       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000000000004b2       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .ARM.attributes
-                0x00000000000004d4       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000000000004d4       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .ARM.attributes
-                0x00000000000004f6       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x0000000000000500       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .ARM.attributes
-                0x0000000000000522       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000000000522       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .ARM.attributes
-                0x0000000000000544       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x000000000000054e       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .ARM.attributes
-                0x0000000000000566       0x32 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000000000570       0x22 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
  .ARM.attributes
-                0x0000000000000598       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000000000592       0x32 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .ARM.attributes
-                0x00000000000005c4       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000000005c4       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x00000000000005f0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x00000000000005f0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
-                0x000000000000061c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000000000061c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x0000000000000648       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000000000648       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .ARM.attributes
-                0x0000000000000674       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000000000674       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .ARM.attributes
-                0x00000000000006a0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00000000000006a0       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .ARM.attributes
-                0x00000000000006cc       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+                0x00000000000006cc       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .ARM.attributes
-                0x00000000000006f8       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000000006f8       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
  .ARM.attributes
-                0x0000000000000724       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000000000724       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
  .ARM.attributes
-                0x0000000000000750       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+                0x0000000000000750       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
  .ARM.attributes
-                0x000000000000077c       0x2c freertos/libfreertos.a(queue.c.obj)
+                0x000000000000077c       0x2c CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
  .ARM.attributes
-                0x00000000000007a8       0x2c freertos/libfreertos.a(tasks.c.obj)
+                0x00000000000007a8       0x2c freertos/libfreertos.a(queue.c.obj)
  .ARM.attributes
-                0x00000000000007d4       0x2c freertos/libfreertos.a(timers.c.obj)
+                0x00000000000007d4       0x2c freertos/libfreertos.a(tasks.c.obj)
  .ARM.attributes
-                0x0000000000000800       0x2c freertos/libfreertos.a(heap_3.c.obj)
+                0x0000000000000800       0x2c freertos/libfreertos.a(timers.c.obj)
  .ARM.attributes
-                0x000000000000082c       0x2c freertos/libfreertos.a(port.c.obj)
+                0x000000000000082c       0x2c freertos/libfreertos.a(heap_3.c.obj)
  .ARM.attributes
-                0x0000000000000858       0x2c freertos/libfreertos.a(list.c.obj)
+                0x0000000000000858       0x2c freertos/libfreertos.a(port.c.obj)
  .ARM.attributes
-                0x0000000000000884       0x2c components/controls/libcontrols.a(controls.c.obj)
+                0x0000000000000884       0x2c freertos/libfreertos.a(list.c.obj)
  .ARM.attributes
-                0x00000000000008b0       0x2c components/lcd/liblcd.a(lcd.c.obj)
+                0x00000000000008b0       0x2c components/controls/libcontrols.a(controls.c.obj)
  .ARM.attributes
-                0x00000000000008dc       0x2c components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
+                0x00000000000008dc       0x2c components/lcd/liblcd.a(lcd.c.obj)
  .ARM.attributes
-                0x0000000000000908       0x2c components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
+                0x0000000000000908       0x2c components/midi_usb/libmidi_usb.a(midi_usb.c.obj)
  .ARM.attributes
-                0x0000000000000934       0x22 /tmp/ccUofhH0.o
+                0x0000000000000934       0x2c components/midi_usb/libmidi_usb.a(usb_descriptors.c.obj)
  .ARM.attributes
-                0x0000000000000956       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000960       0x22 /tmp/cc6csdNL.o
  .ARM.attributes
-                0x0000000000000974       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000000000982       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000000000009a0       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-itoa.o)
+                0x00000000000009a0       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000000000009cc       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
+                0x00000000000009cc       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-itoa.o)
  .ARM.attributes
-                0x00000000000009f8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x00000000000009f8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-malloc.o)
  .ARM.attributes
-                0x0000000000000a24       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
+                0x0000000000000a24       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x0000000000000a50       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x0000000000000a50       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
  .ARM.attributes
-                0x0000000000000a7c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000000000a7c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x0000000000000aa8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
+                0x0000000000000aa8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
  .ARM.attributes
-                0x0000000000000ad4       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
+                0x0000000000000ad4       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-utoa.o)
  .ARM.attributes
-                0x0000000000000b00       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reent.o)
+                0x0000000000000b00       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
  .ARM.attributes
-                0x0000000000000b2c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
+                0x0000000000000b2c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000b58       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtend.o
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -2714,6 +2733,7 @@ LOAD linker stubs
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj

@@ -1,6 +1,6 @@
 components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.obj: \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/midi_usb.c \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/midi_usb.h \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/midi_usb.c \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/midi_usb.h \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -24,9 +24,9 @@ components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.obj: \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  /usr/include/newlib/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
@@ -67,7 +67,7 @@ components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.obj: \
  /usr/include/newlib/string.h /usr/include/newlib/sys/_locale.h \
  /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
- /home/bartosz/Projects/pico-midi-16/components/midi_usb/tusb_config.h \
+ /home/bartosz/projects/pico-midi-16/components/midi_usb/tusb_config.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
  /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \

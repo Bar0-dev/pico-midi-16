@@ -1,4 +1,4 @@
-# Install script for directory: /home/bartosz/Projects/pico-midi-16/components/controls
+# Install script for directory: /home/bartosz/projects/pico-midi-16/components/controls
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

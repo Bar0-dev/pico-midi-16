@@ -18,9 +18,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_syn
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -54,9 +54,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_syn
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -91,9 +91,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_syn
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -128,9 +128,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_syn
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -192,9 +192,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_tim
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -233,9 +233,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_tim
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -267,9 +267,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_uti
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -342,9 +342,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_uti
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -384,9 +384,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/common/pico_uti
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -419,9 +419,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -450,9 +450,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -503,9 +503,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -544,9 +544,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -589,9 +589,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -631,9 +631,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -670,9 +670,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -702,9 +702,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -740,9 +740,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -782,9 +782,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -838,9 +838,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -870,9 +870,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hard
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -907,9 +907,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -948,9 +948,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1017,9 +1017,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1100,9 +1100,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1128,9 +1128,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1188,9 +1188,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/error.h
@@ -1233,9 +1233,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1286,9 +1286,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/include/newlib/machine/ieeefp.h
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1369,9 +1369,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h
  /usr/include/newlib/assert.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1414,9 +1414,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1464,9 +1464,9 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -1506,8 +1506,8 @@ components/lcd/CMakeFiles/lcd.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico
  /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
 
 components/lcd/CMakeFiles/lcd.dir/lcd.c.obj
- /home/bartosz/Projects/pico-midi-16/components/lcd/lcd.c
- /home/bartosz/Projects/pico-midi-16/components/lcd/lcd.h
+ /home/bartosz/projects/pico-midi-16/components/lcd/lcd.c
+ /home/bartosz/projects/pico-midi-16/components/lcd/lcd.h
  /home/bartosz/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h
@@ -1522,9 +1522,9 @@ components/lcd/CMakeFiles/lcd.dir/lcd.c.obj
  /usr/include/newlib/sys/features.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h

@@ -11,9 +11,9 @@ CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
  /usr/include/newlib/sys/features.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
