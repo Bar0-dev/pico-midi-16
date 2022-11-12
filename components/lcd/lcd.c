@@ -16,7 +16,7 @@ static void fill_msg(char msg_str[]){
     msg_str[MSG_MAXSIZE-1]='\0';
 }
 
-static void send_to_lcd(char msg_str[]){
+void send_to_lcd(char msg_str[]){
     fill_msg(msg_str);
     if(i2c_get_write_available(i2c_default)){
         i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, msg_str, MSG_MAXSIZE, true);

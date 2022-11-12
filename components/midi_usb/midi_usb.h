@@ -9,8 +9,10 @@
 #include "bsp/board.h"
 #include "tusb.h"
 
+#define NUM_OF_BTNS 16
+
 void midi_init(void);
 void led_blinking_task(void);
-void midi_task(void);
+void midi_send(uint16_t btns_pressed);
 
 #endif
