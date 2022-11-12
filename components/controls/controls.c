@@ -1,16 +1,15 @@
 #include "controls.h"
 
-uint16_t buttons_pooling(uint8_t button_pins[]){
-    uint16_t pressed;
+uint16_t buttons_pooling(uint8_t button_pins[], bool pressed[], bool *changed){
+    uint16_t checksum_cur = 0;
+    uint16_t checksum_old = 0;
     for(int i=0; i<NUM_OF_BTNS; i++){
-        //all pullups, check for low state
-        if(!gpio_get(button_pins[i])){
-            pressed |= 1 << i;
-        } else {
-            pressed &= ~(1<<i);
-        }
+        bool state = !gpio_get(button_pins[i]);
+        checksum_cur += state;
+        checksum_old += pressed[i];
+        pressed[i] = state;
     }
-    return pressed;
+    if(checksum_cur != checksum_old) *changed = true;
 }
 
 void buttons_init(uint8_t button_pins[]){

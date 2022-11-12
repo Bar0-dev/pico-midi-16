@@ -16,10 +16,17 @@ static void fill_msg(char msg_str[]){
     msg_str[MSG_MAXSIZE-1]='\0';
 }
 
-void send_to_lcd(char msg_str[]){
+void lcd_send_raw(char msg_str[]){
     fill_msg(msg_str);
     if(i2c_get_write_available(i2c_default)){
         i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, msg_str, MSG_MAXSIZE, true);
+    }
+}
+
+void lcd_update_notes(bool pressed[], uint8_t notes_played[]){
+    char msg[32];
+    for(int i=0; i<NUM_OF_BTNS; i++){
+        msg[i] = (uint8_t) pressed[i] + 79;
     }
 }
 

@@ -16,26 +16,28 @@ uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
 
 void controlls_polling(void *arg){
-    uint16_t btns_pressed = 0;
-    uint16_t btns_pressed_old = 0xFF;
+    bool btns_pressed[NUM_OF_BTNS];
+    bool changed = false;
     while(1){
-        btns_pressed = buttons_pooling(btn_pins);
-        if(btns_pressed != btns_pressed_old){
+        buttons_pooling(btn_pins, btns_pressed, &changed);
+        if(changed){
             xQueueSend(logic_queue, (void *)&btns_pressed, (TickType_t) 0);
-            btns_pressed_old=btns_pressed;
+            changed = false;
         } else {
-            vTaskDelay(portTICK_PERIOD_MS);
+            vTaskDelay(1/portTICK_PERIOD_MS);
         }
     }
 }
 
 void logic_controller(void *arg){
-    uint16_t pressed_buff;
+    uint16_t pressed;
+    uint16_t pressed_old;
     while(1){
-        if(xQueueReceive(logic_queue, &(pressed_buff), (TickType_t) 10) == pdTRUE){
-            midi_send(pressed_buff);
+        if(xQueueReceive(logic_queue, &(pressed), (TickType_t) 10) == pdTRUE){
+            midi_send(pressed, &pressed_old);
+            send_to_lcd(pressed);
         } else {
-            vTaskDelay(portTICK_PERIOD_MS);
+            vTaskDelay(1/portTICK_PERIOD_MS);
         }
     }
     
@@ -44,7 +46,7 @@ void logic_controller(void *arg){
 void usb_task(void *arg){
     while(1){
         tud_task();
-        vTaskDelay(portTICK_PERIOD_MS);
+        vTaskDelay(1/portTICK_PERIOD_MS);
     }
 }
 
@@ -72,7 +74,7 @@ int main() {
     //TESTING!!!
 
     //queue definitions
-    logic_queue = xQueueCreate(2, sizeof(uint16_t));
+    logic_queue = xQueueCreate(2, sizeof(bool[7]));
 
     //main tasks
     xTaskCreate(controlls_polling, "Controls-pooling-task", 1024, NULL, 10, NULL);

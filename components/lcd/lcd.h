@@ -13,6 +13,7 @@
 #define NUM_OF_BTNS 16
 
 void lcd_init();
-void send_to_lcd(char msg_str[]);
+void lcd_send_raw(char msg_str[]);
+void lcd_update_notes(uint16_t btns_pressed, uint8_t notes_played[]);
 
 #endif
