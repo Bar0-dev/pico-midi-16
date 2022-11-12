@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/bartosz/pico/pico-sdk/tools/elf2uf2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bartosz/projects/pico-midi-16/bld/elf2uf2
+CMAKE_BINARY_DIR = /home/bartosz/Projects/pico-midi-16/bld/elf2uf2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/elf2uf2/CMakeFiles /home/bartosz/projects/pico-midi-16/bld/elf2uf2//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/elf2uf2/CMakeFiles /home/bartosz/Projects/pico-midi-16/bld/elf2uf2//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/elf2uf2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/elf2uf2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

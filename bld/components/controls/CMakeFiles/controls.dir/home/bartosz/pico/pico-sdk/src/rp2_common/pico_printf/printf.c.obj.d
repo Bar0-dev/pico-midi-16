@@ -28,9 +28,9 @@ components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_c
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
- /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/error.h \

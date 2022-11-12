@@ -4,7 +4,7 @@
 # compile C with /usr/bin/arm-none-eabi-gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/bartosz/projects/pico-midi-16/freertos/. -I/home/bartosz/libs/FreeRTOS-Kernel/include -I/home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0
+C_INCLUDES = -I/home/bartosz/Projects/pico-midi-16/freertos/. -I/home/bartosz/freertos/FreeRTOS-Kernel/include -I/home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0
 
 C_FLAGS = -mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG
 

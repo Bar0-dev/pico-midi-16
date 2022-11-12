@@ -8,17 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
-  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "/home/bartosz/projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+  "/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S" "/home/bartosz/Projects/pico-midi-16/bld/components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
   )
 
 # Preprocessor definitions for this target.
@@ -105,7 +105,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bartosz/projects/pico-midi-16/components/controls/controls.c" "components/controls/CMakeFiles/controls.dir/controls.c.obj" "gcc" "components/controls/CMakeFiles/controls.dir/controls.c.obj.d"
+  "/home/bartosz/Projects/pico-midi-16/components/controls/controls.c" "components/controls/CMakeFiles/controls.dir/controls.c.obj" "gcc" "components/controls/CMakeFiles/controls.dir/controls.c.obj.d"
   "/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj" "gcc" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj.d"
   "/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj" "gcc" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj.d"
   "/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj" "gcc" "components/controls/CMakeFiles/controls.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj.d"

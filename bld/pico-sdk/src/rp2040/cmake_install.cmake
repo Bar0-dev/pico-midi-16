@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
-  include("/home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
+  include("/home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
+  include("/home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
 
 endif()
 

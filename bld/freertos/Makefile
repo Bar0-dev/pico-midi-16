@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bartosz/projects/pico-midi-16
+CMAKE_SOURCE_DIR = /home/bartosz/Projects/pico-midi-16
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bartosz/projects/pico-midi-16/bld
+CMAKE_BINARY_DIR = /home/bartosz/Projects/pico-midi-16/bld
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/CMakeFiles /home/bartosz/projects/pico-midi-16/bld/freertos//CMakeFiles/progress.marks
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/CMakeFiles 0
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/CMakeFiles /home/bartosz/Projects/pico-midi-16/bld/freertos//CMakeFiles/progress.marks
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/clean
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/preinstall
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/preinstall
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 freertos/CMakeFiles/freertos.dir/rule:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/CMakeFiles/freertos.dir/rule
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freertos/CMakeFiles/freertos.dir/rule
 .PHONY : freertos/CMakeFiles/freertos.dir/rule
 
 # Convenience name for target.
@@ -127,200 +127,200 @@ freertos: freertos/CMakeFiles/freertos.dir/rule
 
 # fast build rule for target.
 freertos/fast:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/build
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/build
 .PHONY : freertos/fast
 
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.obj: home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.obj
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.obj: home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.i: home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.i
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.i: home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.s: home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.s
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.s: home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/event_groups.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/event_groups.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/list.obj: home/bartosz/libs/FreeRTOS-Kernel/list.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.obj
+home/bartosz/freertos/FreeRTOS-Kernel/list.obj: home/bartosz/freertos/FreeRTOS-Kernel/list.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/list.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/list.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/list.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/list.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/list.i: home/bartosz/libs/FreeRTOS-Kernel/list.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.i
+home/bartosz/freertos/FreeRTOS-Kernel/list.i: home/bartosz/freertos/FreeRTOS-Kernel/list.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/list.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/list.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/list.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/list.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/list.s: home/bartosz/libs/FreeRTOS-Kernel/list.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.s
+home/bartosz/freertos/FreeRTOS-Kernel/list.s: home/bartosz/freertos/FreeRTOS-Kernel/list.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/list.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/list.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/list.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/list.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/list.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/list.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj: home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj: home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i: home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i: home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s: home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s: home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.obj: home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.obj
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.obj: home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.i: home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.i
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.i: home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.s: home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.s
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.s: home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/queue.obj: home/bartosz/libs/FreeRTOS-Kernel/queue.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.obj
+home/bartosz/freertos/FreeRTOS-Kernel/queue.obj: home/bartosz/freertos/FreeRTOS-Kernel/queue.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/queue.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/queue.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/queue.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/queue.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/queue.i: home/bartosz/libs/FreeRTOS-Kernel/queue.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.i
+home/bartosz/freertos/FreeRTOS-Kernel/queue.i: home/bartosz/freertos/FreeRTOS-Kernel/queue.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/queue.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/queue.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/queue.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/queue.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/queue.s: home/bartosz/libs/FreeRTOS-Kernel/queue.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.s
+home/bartosz/freertos/FreeRTOS-Kernel/queue.s: home/bartosz/freertos/FreeRTOS-Kernel/queue.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/queue.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/queue.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/queue.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/queue.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/queue.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/queue.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.obj: home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.obj
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.obj: home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.i: home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.i
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.i: home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.s: home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.s
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.s: home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/tasks.obj: home/bartosz/libs/FreeRTOS-Kernel/tasks.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.obj
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.obj: home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/tasks.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/tasks.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/tasks.i: home/bartosz/libs/FreeRTOS-Kernel/tasks.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.i
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.i: home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/tasks.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/tasks.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/tasks.s: home/bartosz/libs/FreeRTOS-Kernel/tasks.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.s
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.s: home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/tasks.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/tasks.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/tasks.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/tasks.c.s
 
-home/bartosz/libs/FreeRTOS-Kernel/timers.obj: home/bartosz/libs/FreeRTOS-Kernel/timers.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.obj
+home/bartosz/freertos/FreeRTOS-Kernel/timers.obj: home/bartosz/freertos/FreeRTOS-Kernel/timers.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.obj
 
 # target to build an object file
-home/bartosz/libs/FreeRTOS-Kernel/timers.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/timers.c.obj
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.c.obj
+home/bartosz/freertos/FreeRTOS-Kernel/timers.c.obj:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/timers.c.obj
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.c.obj
 
-home/bartosz/libs/FreeRTOS-Kernel/timers.i: home/bartosz/libs/FreeRTOS-Kernel/timers.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.i
+home/bartosz/freertos/FreeRTOS-Kernel/timers.i: home/bartosz/freertos/FreeRTOS-Kernel/timers.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.i
 
 # target to preprocess a source file
-home/bartosz/libs/FreeRTOS-Kernel/timers.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/timers.c.i
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.c.i
+home/bartosz/freertos/FreeRTOS-Kernel/timers.c.i:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/timers.c.i
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.c.i
 
-home/bartosz/libs/FreeRTOS-Kernel/timers.s: home/bartosz/libs/FreeRTOS-Kernel/timers.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.s
+home/bartosz/freertos/FreeRTOS-Kernel/timers.s: home/bartosz/freertos/FreeRTOS-Kernel/timers.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.s
 
 # target to generate assembly for a file
-home/bartosz/libs/FreeRTOS-Kernel/timers.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/libs/FreeRTOS-Kernel/timers.c.s
-.PHONY : home/bartosz/libs/FreeRTOS-Kernel/timers.c.s
+home/bartosz/freertos/FreeRTOS-Kernel/timers.c.s:
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f freertos/CMakeFiles/freertos.dir/build.make freertos/CMakeFiles/freertos.dir/home/bartosz/freertos/FreeRTOS-Kernel/timers.c.s
+.PHONY : home/bartosz/freertos/FreeRTOS-Kernel/timers.c.s
 
 # Help Target
 help:
@@ -331,30 +331,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... freertos"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/event_groups.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/event_groups.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/event_groups.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/list.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/list.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/list.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/portable/MemMang/heap_3.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/queue.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/queue.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/queue.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/stream_buffer.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/tasks.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/tasks.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/tasks.s"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/timers.obj"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/timers.i"
-	@echo "... home/bartosz/libs/FreeRTOS-Kernel/timers.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/event_groups.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/event_groups.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/event_groups.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/list.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/list.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/list.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/port.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/portable/MemMang/heap_3.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/queue.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/queue.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/queue.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/stream_buffer.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/tasks.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/tasks.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/tasks.s"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/timers.obj"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/timers.i"
+	@echo "... home/bartosz/freertos/FreeRTOS-Kernel/timers.s"
 .PHONY : help
 
 
@@ -366,6 +366,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

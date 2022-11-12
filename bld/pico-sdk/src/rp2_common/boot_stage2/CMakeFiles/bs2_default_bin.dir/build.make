@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bartosz/projects/pico-midi-16
+CMAKE_SOURCE_DIR = /home/bartosz/Projects/pico-midi-16
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bartosz/projects/pico-midi-16/bld
+CMAKE_BINARY_DIR = /home/bartosz/Projects/pico-midi-16/bld
 
 # Utility rule file for bs2_default_bin.
 
@@ -69,8 +69,8 @@ include pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/progr
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bartosz/projects/pico-midi-16/bld/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
-	cd /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 && /usr/bin/arm-none-eabi-objcopy -Obinary /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bartosz/Projects/pico-midi-16/bld/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating bs2_default.bin"
+	cd /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 && /usr/bin/arm-none-eabi-objcopy -Obinary /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/bs2_default.elf /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin
 bs2_default_bin: pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
@@ -82,10 +82,10 @@ pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/build: bs2_de
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
 
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean:
-	cd /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
+	cd /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 && $(CMAKE_COMMAND) -P CMakeFiles/bs2_default_bin.dir/cmake_clean.cmake
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/clean
 
 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bartosz/projects/pico-midi-16 /home/bartosz/pico/pico-sdk/src/rp2_common/boot_stage2 /home/bartosz/projects/pico-midi-16/bld /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 /home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bartosz/Projects/pico-midi-16 /home/bartosz/pico/pico-sdk/src/rp2_common/boot_stage2 /home/bartosz/Projects/pico-midi-16/bld /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2 /home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 

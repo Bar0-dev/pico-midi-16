@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bartosz/projects/pico-midi-16/bld/pico-sdk/tools/cmake_install.cmake")
-  include("/home/bartosz/projects/pico-midi-16/bld/pico-sdk/src/cmake_install.cmake")
-  include("/home/bartosz/projects/pico-midi-16/bld/pico-sdk/docs/cmake_install.cmake")
+  include("/home/bartosz/Projects/pico-midi-16/bld/pico-sdk/tools/cmake_install.cmake")
+  include("/home/bartosz/Projects/pico-midi-16/bld/pico-sdk/src/cmake_install.cmake")
+  include("/home/bartosz/Projects/pico-midi-16/bld/pico-sdk/docs/cmake_install.cmake")
 
 endif()
 

@@ -2229,19 +2229,19 @@ CMakeFiles/main.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib
   /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
 
 CMakeFiles/main.dir/main.c.obj: ../main.c \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/FreeRTOS.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/FreeRTOS.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   ../freertos/FreeRTOSConfig.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/projdefs.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/portable.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/deprecated_definitions.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/mpu_wrappers.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/task.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/list.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/queue.h \
-  /home/bartosz/libs/FreeRTOS-Kernel/include/task.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/projdefs.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/portable.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/deprecated_definitions.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/mpu_wrappers.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/task.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/list.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/queue.h \
+  /home/bartosz/freertos/FreeRTOS-Kernel/include/task.h \
   /usr/include/newlib/stdio.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -2355,9 +2355,13 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 
 ../components/lcd/lcd.h:
 
-/home/bartosz/libs/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h:
+/home/bartosz/freertos/FreeRTOS-Kernel/include/list.h:
 
-/home/bartosz/libs/FreeRTOS-Kernel/include/FreeRTOS.h:
+/home/bartosz/freertos/FreeRTOS-Kernel/include/portable.h:
+
+/home/bartosz/freertos/FreeRTOS-Kernel/include/projdefs.h:
+
+/home/bartosz/freertos/FreeRTOS-Kernel/include/FreeRTOS.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
@@ -2382,6 +2386,8 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/include/pico/malloc.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c:
+
+/home/bartosz/freertos/FreeRTOS-Kernel/include/task.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c:
 
@@ -2415,8 +2421,6 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h:
 
-/home/bartosz/libs/FreeRTOS-Kernel/include/queue.h:
-
 /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xosc.h:
@@ -2434,6 +2438,8 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 /home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
+
+/home/bartosz/freertos/FreeRTOS-Kernel/include/deprecated_definitions.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h:
 
@@ -2465,6 +2471,8 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c:
 
+/home/bartosz/freertos/FreeRTOS-Kernel/include/queue.h:
+
 /usr/include/newlib/stdlib.h:
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
@@ -2494,8 +2502,6 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
-
-/home/bartosz/libs/FreeRTOS-Kernel/include/projdefs.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h:
 
@@ -2609,8 +2615,6 @@ CMakeFiles/main.dir/main.c.obj: ../main.c \
 
 /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/error.h:
 
-/home/bartosz/libs/FreeRTOS-Kernel/include/portable.h:
-
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h:
@@ -2635,15 +2639,11 @@ generated/pico_base/pico/version.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h:
 
-/home/bartosz/libs/FreeRTOS-Kernel/include/list.h:
-
 /home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
 
 /usr/include/newlib/sys/types.h:
 
 /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h:
-
-/home/bartosz/libs/FreeRTOS-Kernel/include/mpu_wrappers.h:
 
 /usr/include/newlib/sys/timespec.h:
 
@@ -2654,8 +2654,6 @@ generated/pico_base/pico/version.h:
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/float.h:
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi.h:
-
-/home/bartosz/libs/FreeRTOS-Kernel/include/deprecated_definitions.h:
 
 /usr/include/newlib/c++/10.3.1/bits/std_abs.h:
 
@@ -2714,6 +2712,8 @@ generated/pico_base/pico/version.h:
 ../components/controls/controls.h:
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/dcd_attr.h:
+
+/home/bartosz/freertos/FreeRTOS-Kernel/portable/GCC/ARM_CM0/portmacro.h:
 
 /usr/include/newlib/sys/sched.h:
 
@@ -2775,7 +2775,7 @@ generated/pico_base/pico/version.h:
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c:
 
-/home/bartosz/libs/FreeRTOS-Kernel/include/task.h:
+/home/bartosz/freertos/FreeRTOS-Kernel/include/mpu_wrappers.h:
 
 /home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
 

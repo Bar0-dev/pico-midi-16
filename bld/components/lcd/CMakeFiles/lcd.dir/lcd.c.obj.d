@@ -1,6 +1,6 @@
 components/lcd/CMakeFiles/lcd.dir/lcd.c.obj: \
- /home/bartosz/projects/pico-midi-16/components/lcd/lcd.c \
- /home/bartosz/projects/pico-midi-16/components/lcd/lcd.h \
+ /home/bartosz/Projects/pico-midi-16/components/lcd/lcd.c \
+ /home/bartosz/Projects/pico-midi-16/components/lcd/lcd.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -12,9 +12,9 @@ components/lcd/CMakeFiles/lcd.dir/lcd.c.obj: \
  /usr/include/newlib/sys/features.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
+ /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/version.h \
  /home/bartosz/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /home/bartosz/projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
+ /home/bartosz/Projects/pico-midi-16/bld/generated/pico_base/pico/config_autogen.h \
  /home/bartosz/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \

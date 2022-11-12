@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bartosz/projects/pico-midi-16
+CMAKE_SOURCE_DIR = /home/bartosz/Projects/pico-midi-16
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bartosz/projects/pico-midi-16/bld
+CMAKE_BINARY_DIR = /home/bartosz/Projects/pico-midi-16/bld
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/CMakeFiles /home/bartosz/projects/pico-midi-16/bld/components/midi_usb//CMakeFiles/progress.marks
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/projects/pico-midi-16/bld/CMakeFiles 0
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/CMakeFiles /home/bartosz/Projects/pico-midi-16/bld/components/midi_usb//CMakeFiles/progress.marks
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bartosz/Projects/pico-midi-16/bld/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/clean
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/preinstall
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/preinstall
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 components/midi_usb/CMakeFiles/midi_usb.dir/rule:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/CMakeFiles/midi_usb.dir/rule
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/midi_usb/CMakeFiles/midi_usb.dir/rule
 .PHONY : components/midi_usb/CMakeFiles/midi_usb.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ midi_usb: components/midi_usb/CMakeFiles/midi_usb.dir/rule
 
 # fast build rule for target.
 midi_usb/fast:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/build
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/build
 .PHONY : midi_usb/fast
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
@@ -135,7 +135,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/bartosz/pi
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
@@ -143,7 +143,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/bartosz/pico
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
@@ -151,7 +151,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/bartosz/pico
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
@@ -159,7 +159,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/ba
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -167,7 +167,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/bart
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -175,7 +175,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/bart
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -183,7 +183,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -191,7 +191,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -199,7 +199,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -207,7 +207,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -215,7 +215,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -223,7 +223,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -231,7 +231,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/bar
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -239,7 +239,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/barto
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -247,7 +247,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/barto
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -255,7 +255,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -263,7 +263,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -271,7 +271,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -279,7 +279,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/bart
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -287,7 +287,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/bartos
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -295,7 +295,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/bartos
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -303,7 +303,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -311,7 +311,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -319,7 +319,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -327,7 +327,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -335,7 +335,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/ba
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -343,7 +343,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/ba
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -351,7 +351,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -359,7 +359,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -367,7 +367,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -375,7 +375,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -383,7 +383,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/ba
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -391,7 +391,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/ba
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -399,7 +399,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -407,7 +407,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/ba
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -415,7 +415,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/ba
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
@@ -423,7 +423,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/ba
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -431,7 +431,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/bart
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -439,7 +439,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/bart
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -447,7 +447,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/bartosz/pi
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -455,7 +455,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/bartosz/pico
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -463,7 +463,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/bartosz/pico
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -471,7 +471,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/bartosz/pico/pi
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -479,7 +479,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/bartosz/pico/pico
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -487,7 +487,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/bartosz/pico/pico
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -495,7 +495,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -503,7 +503,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -511,7 +511,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -519,7 +519,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -527,7 +527,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -535,7 +535,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -543,7 +543,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -551,7 +551,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -559,7 +559,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
@@ -567,7 +567,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/bartosz/pico/pico-sdk/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -575,7 +575,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/bartosz/pico/pico-sdk/li
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -583,7 +583,7 @@ home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/bartosz/pico/pico-sdk/li
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/bartosz/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -591,7 +591,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/barto
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -599,7 +599,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/bartosz
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -607,7 +607,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/bartosz
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -615,7 +615,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/bartosz/pico
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -623,7 +623,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/bartosz/pico/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -631,7 +631,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/bartosz/pico/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -639,7 +639,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/bartosz/pico/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.i: home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -647,7 +647,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.i: home/bartosz/pico/pico-
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.s: home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -655,7 +655,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.s: home/bartosz/pico/pico-
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.obj: home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -663,7 +663,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.obj: home/bartosz/pico/pico-
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.i: home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -671,7 +671,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.i: home/bartosz/pico/pico-sd
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.s: home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -679,7 +679,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.s: home/bartosz/pico/pico-sd
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.obj: home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -687,7 +687,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/time.obj: home/bartosz/pico/pico
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.i: home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -695,7 +695,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/time.i: home/bartosz/pico/pico-s
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.s: home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -703,7 +703,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/time.s: home/bartosz/pico/pico-s
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/time.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -711,7 +711,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -719,7 +719,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -727,7 +727,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.obj: home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -735,7 +735,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.obj: home/bartosz/pico/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.i: home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -743,7 +743,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.i: home/bartosz/pico/pi
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.s: home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -751,7 +751,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.s: home/bartosz/pico/pi
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.obj: home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -759,7 +759,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.obj: home/bartosz/pico/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.i: home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -767,7 +767,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.i: home/bartosz/pico/pico-
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.s: home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -775,7 +775,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.s: home/bartosz/pico/pico-
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.obj: home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -783,7 +783,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/queue.obj: home/bartosz/pico/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.i: home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -791,7 +791,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/queue.i: home/bartosz/pico/pico-
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.s: home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -799,7 +799,7 @@ home/bartosz/pico/pico-sdk/src/common/pico_util/queue.s: home/bartosz/pico/pico-
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -807,7 +807,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -815,7 +815,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -823,7 +823,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -831,7 +831,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/barto
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -839,7 +839,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/bartosz
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -847,7 +847,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/bartosz
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -855,7 +855,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/bar
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -863,7 +863,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -871,7 +871,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -879,7 +879,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -887,7 +887,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/bartosz/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -895,7 +895,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/bartosz/pico/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -903,7 +903,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/bartosz/pico/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -911,7 +911,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: ho
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -919,7 +919,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/bartosz/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -927,7 +927,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/bartosz/pico/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -935,7 +935,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/bartosz/pico/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -943,7 +943,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -951,7 +951,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -959,7 +959,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -967,7 +967,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -975,7 +975,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -983,7 +983,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -991,7 +991,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -999,7 +999,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1007,7 +1007,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1015,7 +1015,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1023,7 +1023,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1031,7 +1031,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1039,7 +1039,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/b
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1047,7 +1047,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/bar
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1055,7 +1055,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/bar
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1063,7 +1063,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1071,7 +1071,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1079,7 +1079,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1087,7 +1087,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/b
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1095,7 +1095,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1103,7 +1103,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1111,7 +1111,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1119,7 +1119,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1127,7 +1127,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/bar
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1135,7 +1135,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1143,7 +1143,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/ba
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1151,7 +1151,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/ba
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1159,7 +1159,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/bart
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1167,7 +1167,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/bartos
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1175,7 +1175,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/bartos
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1183,7 +1183,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: ho
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1191,7 +1191,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1199,7 +1199,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1207,7 +1207,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -1215,7 +1215,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/barto
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -1223,7 +1223,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/ba
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -1231,7 +1231,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/bart
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -1239,7 +1239,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/bart
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1247,7 +1247,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/bartos
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1255,7 +1255,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/bartosz/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1263,7 +1263,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/bartosz/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1271,7 +1271,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1279,7 +1279,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.ob
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1287,7 +1287,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/bart
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1295,7 +1295,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/bartos
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1303,7 +1303,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/bartos
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1311,7 +1311,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/b
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -1319,7 +1319,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/barto
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -1327,7 +1327,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: home/bartosz
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -1335,7 +1335,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: home/bartosz
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1343,7 +1343,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1351,7 +1351,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1359,7 +1359,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1367,7 +1367,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/bartosz
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1375,7 +1375,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/bartosz/p
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1383,7 +1383,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/bartosz/p
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1391,7 +1391,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: ho
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1399,7 +1399,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1407,7 +1407,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1415,7 +1415,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/bart
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1423,7 +1423,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: hom
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1431,7 +1431,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1439,7 +1439,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1447,7 +1447,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/bartosz/pic
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1455,7 +1455,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/bartosz/pico/
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1463,7 +1463,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/bartosz/pico/
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -1471,7 +1471,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/b
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -1479,7 +1479,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/bar
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -1487,7 +1487,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/bar
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1495,7 +1495,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/bartosz/p
 
 # target to build an object file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1503,7 +1503,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/bartosz/pic
 
 # target to preprocess a source file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1511,7 +1511,7 @@ home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/bartosz/pic
 
 # target to generate assembly for a file
 home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/bartosz/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 midi_usb.obj: midi_usb.c.obj
@@ -1519,7 +1519,7 @@ midi_usb.obj: midi_usb.c.obj
 
 # target to build an object file
 midi_usb.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.obj
 .PHONY : midi_usb.c.obj
 
 midi_usb.i: midi_usb.c.i
@@ -1527,7 +1527,7 @@ midi_usb.i: midi_usb.c.i
 
 # target to preprocess a source file
 midi_usb.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.i
 .PHONY : midi_usb.c.i
 
 midi_usb.s: midi_usb.c.s
@@ -1535,7 +1535,7 @@ midi_usb.s: midi_usb.c.s
 
 # target to generate assembly for a file
 midi_usb.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/midi_usb.c.s
 .PHONY : midi_usb.c.s
 
 usb_descriptors.obj: usb_descriptors.c.obj
@@ -1543,7 +1543,7 @@ usb_descriptors.obj: usb_descriptors.c.obj
 
 # target to build an object file
 usb_descriptors.c.obj:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.obj
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.obj
 .PHONY : usb_descriptors.c.obj
 
 usb_descriptors.i: usb_descriptors.c.i
@@ -1551,7 +1551,7 @@ usb_descriptors.i: usb_descriptors.c.i
 
 # target to preprocess a source file
 usb_descriptors.c.i:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.i
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.i
 .PHONY : usb_descriptors.c.i
 
 usb_descriptors.s: usb_descriptors.c.s
@@ -1559,7 +1559,7 @@ usb_descriptors.s: usb_descriptors.c.s
 
 # target to generate assembly for a file
 usb_descriptors.c.s:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.s
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(MAKE) $(MAKESILENT) -f components/midi_usb/CMakeFiles/midi_usb.dir/build.make components/midi_usb/CMakeFiles/midi_usb.dir/usb_descriptors.c.s
 .PHONY : usb_descriptors.c.s
 
 # Help Target
@@ -1761,6 +1761,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bartosz/projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bartosz/Projects/pico-midi-16/bld && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
