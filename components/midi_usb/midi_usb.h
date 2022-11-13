@@ -5,14 +5,14 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "pico/binary_info.h"
-
 #include "bsp/board.h"
 #include "tusb.h"
-
-#define NUM_OF_BTNS 16
+#include "../types/types.h"
 
 void midi_init(void);
 uint32_t led_interval(void);
-void midi_send(bool pressed[]);
+void midi_start(uint8_t btn);
+void midi_stop(uint8_t btn);
+
 
 #endif

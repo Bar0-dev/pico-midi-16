@@ -3,9 +3,11 @@
 #include <queue.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "components/lcd/lcd.h"
 #include "components/controls/controls.h"
 #include "components/midi_usb/midi_usb.h"
+#include "components/types/types.h"
 
 //Global variables
 //queque handles
@@ -15,31 +17,67 @@ uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 /*16 bit variable reperesents 16 buttons inputs state, one bit for each
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
 
-void controlls_polling(void *arg){
-    uint8_t btns_pressed[NUM_OF_BTNS];
-    bool changed = false;
-    while(1){
-        buttons_pooling(btn_pins, btns_pressed, &changed);
-        if(changed){
-            xQueueSend(logic_queue, (void *)&btns_pressed, (TickType_t) 0);
-            changed = false;
-        } else {
-            vTaskDelay(1/portTICK_PERIOD_MS);
+//helpers
+//check if given position is in stack
+bool in_stack(uint8_t btn_num, BtnStack_t *trgt){
+    if(!trgt->lenght) return false;
+    for(int i=0; i<trgt->lenght; i++){
+        if(btn_num == trgt->stack[i]){
+            return true;
+            }
+        return false;
+    }
+}
+
+void cpy_btn_stack(BtnStack_t *src, BtnStack_t *trgt){
+    memcpy(trgt->stack, src->stack, NUM_OF_BTNS);
+    trgt->lenght = src->lenght;
+}
+
+void reset_btn_stack(BtnStack_t *btn_stack){
+    memset(btn_stack->stack, 0, NUM_OF_BTNS);
+    btn_stack->lenght = 0;
+}
+
+void check_to_stop(BtnStack_t *current, BtnStack_t *pressed){
+    for(int i=0; i<pressed->lenght; i++){
+        if(!in_stack(pressed->stack[i], current)){
+            midi_stop(pressed->stack[i]-1);
         }
     }
 }
 
-void logic_controller(void *arg){
-    bool pressed[NUM_OF_BTNS];
-    uint8_t note_stack[];
-    while(1){
-        if(xQueueReceive(logic_queue, &(pressed), (TickType_t) 10) == pdTRUE){
-            for(int i=0; i<NUM_OF_BTNS)
-        } else {
-            vTaskDelay(1/portTICK_PERIOD_MS);
+void check_to_start(BtnStack_t *current, BtnStack_t *pressed){
+    for(int i=0; i<current->lenght; i++){
+        if(!in_stack(current->stack[i], pressed)){
+            midi_start(current->stack[i]-1);
         }
     }
+}
+
+void stop_all(){
+    for(int i=0; i<NUM_OF_BTNS; i++){
+        midi_stop(btn_pins[i]);
+    }
+}
+
+void controlls_polling(void *arg){
+    BtnStack_t current;
+    BtnStack_t pressed;
+    reset_btn_stack(&current);
+    reset_btn_stack(&pressed);
     
+    while(1){
+        buttons_pooling(&current);
+        if(!current.lenght){
+            stop_all(&pressed);
+        }
+        check_to_stop(&current, &pressed);
+        check_to_start(&current, &pressed);
+        cpy_btn_stack(&current, &pressed);
+        reset_btn_stack(&current);
+        vTaskDelay(10/portTICK_PERIOD_MS);
+    }
 }
 
 void usb_task(void *arg){
@@ -73,11 +111,10 @@ int main() {
     //TESTING!!!
 
     //queue definitions
-    logic_queue = xQueueCreate(2, sizeof(bool[7]));
+    logic_queue = xQueueCreate(2, sizeof(BtnStack_t));
 
     //main tasks
     xTaskCreate(controlls_polling, "Controls-pooling-task", 1024, NULL, 10, NULL);
-    xTaskCreate(logic_controller, "Logic-controller-task", 1024, NULL, 11, NULL);
     xTaskCreate(usb_task, "usb-task", 256, NULL,15,NULL);
 
     //TESTING
