@@ -14,6 +14,6 @@
 
 void lcd_init();
 void lcd_send_raw(char msg_str[]);
-void lcd_update_notes(uint16_t btns_pressed, uint8_t notes_played[]);
+void lcd_update_notes(bool pressed[], bool pressed_old);
 
 #endif

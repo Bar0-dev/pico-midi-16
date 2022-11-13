@@ -16,7 +16,7 @@ uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
 
 void controlls_polling(void *arg){
-    bool btns_pressed[NUM_OF_BTNS];
+    uint8_t btns_pressed[NUM_OF_BTNS];
     bool changed = false;
     while(1){
         buttons_pooling(btn_pins, btns_pressed, &changed);
@@ -30,12 +30,11 @@ void controlls_polling(void *arg){
 }
 
 void logic_controller(void *arg){
-    uint16_t pressed;
-    uint16_t pressed_old;
+    bool pressed[NUM_OF_BTNS];
+    uint8_t note_stack[];
     while(1){
         if(xQueueReceive(logic_queue, &(pressed), (TickType_t) 10) == pdTRUE){
-            midi_send(pressed, &pressed_old);
-            send_to_lcd(pressed);
+            for(int i=0; i<NUM_OF_BTNS)
         } else {
             vTaskDelay(1/portTICK_PERIOD_MS);
         }

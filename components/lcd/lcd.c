@@ -23,11 +23,12 @@ void lcd_send_raw(char msg_str[]){
     }
 }
 
-void lcd_update_notes(bool pressed[], uint8_t notes_played[]){
+void lcd_update_notes(bool pressed[], bool pressed_old){
     char msg[32];
     for(int i=0; i<NUM_OF_BTNS; i++){
-        msg[i] = (uint8_t) pressed[i] + 79;
+        msg[i] = (uint8_t) pressed[i];
     }
+    lcd_send_raw(msg);
 }
 
 void lcd_init(){

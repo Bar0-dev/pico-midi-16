@@ -49,7 +49,7 @@ void tud_resume_cb(void)
 
 uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
 
-void midi_send(uint16_t btns_pressed, uint16_t *btns_pressed_old)
+void midi_send(bool pressed[])
 {
   uint8_t const cable_num = 0; // MIDI jack associated with USB endpoint
   uint8_t const channel   = 0; // 0 for channel 1
