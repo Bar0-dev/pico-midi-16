@@ -5,7 +5,7 @@ static uint8_t pins[NUM_OF_BTNS];
 void buttons_pooling(BtnStack_t *btn_stack){
     for(int i=0, j=0; i<NUM_OF_BTNS; i++){
         if(!gpio_get(pins[i])){
-            btn_stack->stack[j] = i+1;
+            btn_stack->stack[j] = pins[i]+1;
             btn_stack->lenght = j+1;
             j++;
         }
