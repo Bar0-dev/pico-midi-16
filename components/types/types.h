@@ -3,6 +3,7 @@
 
 #define NUM_OF_BTNS 16
 #define MSG_MAXSIZE 32
+#define NUM_OF_CC 11
 
 typedef struct BtnStack
 {
