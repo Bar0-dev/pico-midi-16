@@ -11,7 +11,7 @@
 #include "components/pico-mux/pico-mux.h"
 
 //defines
-#define CC_SIG_PIN 28
+#define CC_SIG_PIN 27
 
 //Global variables
 //queque handles
@@ -21,6 +21,9 @@ uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 /*16 bit variable reperesents 16 buttons inputs state, one bit for each
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
 uint8_t cc_pins[] = {16, 17, 18, 19};
+uint8_t cc_channels[] = {0, 1, 2, 3, 4, 5, 6, 11};
+//on mux channels for aux buttons
+uint8_t aux_btns_pins[] = {8, 9, 10};
 
 //helpers
 //check if given position is in stack
@@ -86,10 +89,21 @@ void buttons_polling(void *arg){
 }
 
 void cc_polling(void *arg){
-    uint16_t cc_reads[NUM_OF_CC];
+    CCStack_t cc_stack;
+    uint8_t current[NUM_OF_CC];
+    uint8_t old[NUM_OF_CC];
+    uint8_t val;
+
     while (1){
-        mux_read(cc_reads, NUM_OF_CC);
-        vTaskDelay(50/portTICK_PERIOD_MS);
+        cc_read(&cc_stack, current, old);
+        if(cc_stack.length>0){
+            for(int i=0; i<cc_stack.length; i++){
+                val = current[cc_stack.ids[i]];
+                midi_send_cc(cc_stack.ids[i], val);
+            }
+            cc_stack.length = 0;
+        }
+        vTaskDelay(200/portTICK_PERIOD_MS);
     }
 }
 
@@ -115,7 +129,7 @@ int main() {
     //setup
     stdio_init_all();
     buttons_init(btn_pins);
-    mux_init(cc_pins, CC_SIG_PIN, true, true);
+    mux_init(cc_pins, CC_SIG_PIN, cc_channels, true, true);
     lcd_init();
     midi_init();
 

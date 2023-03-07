@@ -48,13 +48,12 @@ void tud_resume_cb(void)
 }
 
 uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
+uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22, 29, 30, 31};
 
 void midi_start(uint8_t btn)
 {
-  uint8_t const cable_num = 0; // MIDI jack associated with USB endpoint
-  uint8_t const channel   = 0; // 0 for channel 1
-  uint8_t note_on[3] = { 0x90 | channel, notes[btn], 127 };
-  tud_midi_stream_write(cable_num, note_on, 3);
+  uint8_t note_on[3] = { 0x90 | CHANNEL, notes[btn], 127 };
+  tud_midi_stream_write(CABLE_NUM, note_on, 3);
 
   // The MIDI interface always creates input and output port/jack descriptors
   // regardless of these being used or not. Therefore incoming traffic should be read
@@ -65,10 +64,13 @@ void midi_start(uint8_t btn)
 
 void midi_stop(uint8_t btn)
 {
-  uint8_t const cable_num = 0; // MIDI jack associated with USB endpoint
-  uint8_t const channel   = 0; // 0 for channel 1
-  uint8_t note_off[3] = { 0x80 | channel, notes[btn], 0 };
-  tud_midi_stream_write(cable_num, note_off, 3);
+  uint8_t note_off[3] = { 0x80 | CHANNEL, notes[btn], 0 };
+  tud_midi_stream_write(CABLE_NUM, note_off, 3);
+}
+
+void midi_send_cc(uint8_t cc_num, uint8_t value){
+  uint8_t cc_msg[3] = { 0xB0 | CHANNEL, cc_setup[cc_num], value};
+  tud_midi_stream_write(CABLE_NUM, cc_msg, 3);
 }
 
 //--------------------------------------------------------------------+
