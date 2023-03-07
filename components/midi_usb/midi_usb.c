@@ -48,7 +48,7 @@ void tud_resume_cb(void)
 }
 
 uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
-uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22, 29, 30, 31};
+uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22};
 
 void midi_start(uint8_t btn)
 {

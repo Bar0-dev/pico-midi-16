@@ -8,7 +8,7 @@
 #include "components/controls/controls.h"
 #include "components/midi_usb/midi_usb.h"
 #include "components/types/types.h"
-#include "components/pico-mux/pico-mux.h"
+#include "components/mux/mux.h"
 
 //defines
 #define CC_SIG_PIN 27
@@ -20,10 +20,10 @@ QueueHandle_t logic_queue;
 uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 /*16 bit variable reperesents 16 buttons inputs state, one bit for each
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
-uint8_t cc_pins[] = {16, 17, 18, 19};
-uint8_t cc_channels[] = {0, 1, 2, 3, 4, 5, 6, 11};
+uint8_t cc_select_pins[] = {16, 17, 18, 19};
+uint8_t cc_mux_channels[] = {0, 1, 2, 3, 4, 5, 6, 11};
 //on mux channels for aux buttons
-uint8_t aux_btns_pins[] = {8, 9, 10};
+uint8_t aux_btns_mux_channels[] = {8, 9, 10};
 
 //helpers
 //check if given position is in stack
@@ -69,7 +69,7 @@ void stop_all(){
     }
 }
 
-void buttons_polling(void *arg){
+void handle_buttons(void *arg){
     BtnStack_t current;
     BtnStack_t pressed;
     reset_btn_stack(&current);
@@ -88,21 +88,15 @@ void buttons_polling(void *arg){
     }
 }
 
-void cc_polling(void *arg){
-    CCStack_t cc_stack;
-    uint8_t current[NUM_OF_CC];
-    uint8_t old[NUM_OF_CC];
-    uint8_t val;
+void handle_cc(void *arg){
+    ccStack_t cc_stack;
 
     while (1){
-        cc_read(&cc_stack, current, old);
-        if(cc_stack.length>0){
-            for(int i=0; i<cc_stack.length; i++){
-                val = current[cc_stack.ids[i]];
-                midi_send_cc(cc_stack.ids[i], val);
-            }
-            cc_stack.length = 0;
+        cc_update(&cc_stack);
+        for(int i=0; i<cc_stack.count; i++){
+            midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value);
         }
+        cc_stack.count = 0;
         vTaskDelay(200/portTICK_PERIOD_MS);
     }
 }
@@ -129,8 +123,10 @@ int main() {
     //setup
     stdio_init_all();
     buttons_init(btn_pins);
-    mux_init(cc_pins, CC_SIG_PIN, cc_channels, true, true);
+    cc_init(cc_mux_channels);
+    mux_init(cc_select_pins, CC_SIG_PIN, true, true);
     lcd_init();
+    lcd_print("Initilizing...");
     midi_init();
 
     gpio_init(PICO_DEFAULT_LED_PIN);
@@ -140,8 +136,8 @@ int main() {
     logic_queue = xQueueCreate(2, sizeof(BtnStack_t));
 
     //main tasks
-    xTaskCreate(buttons_polling, "Buttons-pooling-task", 1024, NULL, 10, NULL);
-    xTaskCreate(cc_polling, "CC-polling-task", 1024, NULL, 9, NULL);
+    xTaskCreate(handle_buttons, "buttons-pooling-task", 1024, NULL, 10, NULL);
+    // xTaskCreate(handle_cc, "cc-polling-task", 1024, NULL, 9, NULL);
     xTaskCreate(usb_task, "usb-task", 256, NULL, 15, NULL);
 
     xTaskCreate(blink, "blink", 256, NULL, 5, NULL);
