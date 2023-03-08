@@ -146,9 +146,10 @@ int main() {
 
     xTaskCreate(blink, "blink", 256, NULL, 5, NULL);
 
+    lcd_print("TEST!");
+
     vTaskStartScheduler();
     while(1){
-
     }
     return 0;
 }

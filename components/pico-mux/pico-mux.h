@@ -10,8 +10,6 @@
 #include "hardware/adc.h"
 #include "../types/types.h"
 
-#include "../lcd/lcd.h"
-
 #define CHANNELS 16
 #define ADC_CHANNEL 1
 #define SELECT_PINS 4

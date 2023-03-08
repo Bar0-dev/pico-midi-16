@@ -53,21 +53,19 @@ void lcd_home(){
     lcd_send_raw(command);
 }
 
-void lcd_debug_ccstack(CCStack_t *ccstack){
-    uint8_t num = ccstack->ids[0];
-    char msg[32];
-    lcd_clear();
-    sprintf(msg, "%d", num);
-    lcd_print(msg);
-}
+// void lcd_debug_ccstack(CCStack_t *ccstack){
+//     uint8_t num = ccstack->ids[0];
+//     char msg[32];
+//     sprintf(msg, "%d", num);
+//     lcd_print(msg);
+// }
 
-void lcd_debug_btn_stack(BtnStack_t *btn_stack){
-    uint8_t num = btn_stack->stack[0];
-    char msg[32];
-    lcd_clear();
-    sprintf(msg, "%d", num);
-    lcd_print(msg);
-}
+// void lcd_debug_btn_stack(BtnStack_t *btn_stack){
+//     uint8_t num = btn_stack->stack[0];
+//     char msg[32];
+//     sprintf(msg, "%d", num);
+//     lcd_print(msg);
+// }
 
 void lcd_init(){
     i2c_init(i2c_default, I2C_BAUDRATE);
@@ -76,5 +74,4 @@ void lcd_init(){
     gpio_pull_up(PICO_I2C_SDA_PIN);
     gpio_pull_up(PICO_I2C_SCL_PIN);
     bi_decl(bi_2pins_with_func(PICO_I2C_SDA_PIN, PICO_I2C_SCL_PIN, GPIO_FUNC_I2C));
-    lcd_clear();
 }
