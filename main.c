@@ -93,10 +93,13 @@ void handle_cc(void *arg){
 
     while (1){
         cc_update(&cc_stack);
-        for(int i=0; i<cc_stack.count; i++){
-            midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value);
+        if(cc_stack.count){
+            for(int i=0; i<cc_stack.count; i++){
+                midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value);
+            }
         }
         cc_stack.count = 0;
+        lcd_debug_ccstack(&cc_stack);
         vTaskDelay(200/portTICK_PERIOD_MS);
     }
 }
@@ -126,7 +129,6 @@ int main() {
     cc_init(cc_mux_channels);
     mux_init(cc_select_pins, CC_SIG_PIN, true, true);
     lcd_init();
-    lcd_print("Initilizing...");
     midi_init();
 
     gpio_init(PICO_DEFAULT_LED_PIN);
@@ -137,7 +139,7 @@ int main() {
 
     //main tasks
     xTaskCreate(handle_buttons, "buttons-pooling-task", 1024, NULL, 10, NULL);
-    // xTaskCreate(handle_cc, "cc-polling-task", 1024, NULL, 9, NULL);
+    xTaskCreate(handle_cc, "cc-polling-task", 1024, NULL, 9, NULL);
     xTaskCreate(usb_task, "usb-task", 256, NULL, 15, NULL);
 
     xTaskCreate(blink, "blink", 256, NULL, 5, NULL);

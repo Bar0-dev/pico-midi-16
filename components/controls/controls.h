@@ -6,7 +6,7 @@
 #include "../types/types.h"
 #include <string.h>
 
-#define CC_POT_THRESHOLD 2
+#define CC_POT_THRESHOLD 5
 #define CC_BTN_THRESHOLD 2000
 #define NUM_OF_AUX_BTNS 3
 

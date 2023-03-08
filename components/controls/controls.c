@@ -14,10 +14,6 @@ void buttons_init(uint8_t button_pins[]){
     }
 }
 
-void cc_init(uint8_t mux_channels[]){
-    memcpy(cc_pins, mux_channels, sizeof(uint8_t)*NUM_OF_CC);
-}
-
 void buttons_pooling(BtnStack_t *btn_stack){
     for(int i=0, j=0; i<NUM_OF_BTNS; i++){
         if(!gpio_get(btn_pins[i])){
@@ -38,11 +34,12 @@ static void cc_read(uint8_t values[]){
 
 void cc_update(ccStack_t *cc_stack){
     cc_read(current_cc);
-    for(int i=0; i<NUM_OF_CC; i++){
+    for(int i=0, j=0; i<NUM_OF_CC; i++){
         if(abs(current_cc[i]-old_cc[i])>CC_POT_THRESHOLD){
-            cc_stack->changed[i].id = i;
-            cc_stack->changed[i].value = current_cc[i];
-            cc_stack->count++;
+            cc_stack->changed[j].id = i;
+            cc_stack->changed[j].value = current_cc[i];
+            j++;
+            cc_stack->count = j;
         }
     }
     memcpy(old_cc, current_cc, sizeof(uint8_t)*NUM_OF_CC);
@@ -56,3 +53,7 @@ void cc_update(ccStack_t *cc_stack){
 //         state[i] = btn_read;
 //     }
 // }
+
+void cc_init(uint8_t mux_channels[]){
+    memcpy(cc_pins, mux_channels, sizeof(uint8_t)*NUM_OF_CC);
+}
