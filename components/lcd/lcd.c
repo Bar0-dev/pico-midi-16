@@ -1,33 +1,9 @@
 #include "lcd.h"
 
-static void fill_msg(char msg_str[]){
-    uint8_t size = 0;
-    uint8_t to_fill;
-    while (msg_str[size] != '\0')
-    {
-        size++;
-    }
-    to_fill = MSG_MAXSIZE - size;
-    while (to_fill > 0)
-    {
-        msg_str[size+to_fill-1] = ' ';
-        to_fill--;
-    }
-    msg_str[MSG_MAXSIZE-1]='\0';
-}
-
-void lcd_send_raw(char msg_str[]){
+static void lcd_send_raw(char msg_str[]){
     if(i2c_get_write_available(i2c_default)){
-        i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, msg_str, MSG_MAXSIZE, true);
+        i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, msg_str, CMD_MAX_LENGTH, true);
     }
-}
-
-void lcd_update_notes(bool pressed[], bool pressed_old){
-    char msg[32];
-    for(int i=0; i<NUM_OF_BTNS; i++){
-        msg[i] = (uint8_t) pressed[i];
-    }
-    lcd_send_raw(msg);
 }
 
 void lcd_print(char msg[]){
@@ -53,16 +29,27 @@ void lcd_home(){
     lcd_send_raw(command);
 }
 
+<<<<<<< HEAD
 // void lcd_debug_ccstack(CCStack_t *ccstack){
 //     uint8_t num = ccstack->ids[0];
 //     char msg[32];
 //     sprintf(msg, "%d", num);
 //     lcd_print(msg);
 // }
+=======
+void lcd_debug_ccstack(ccStack_t *ccstack){
+    lcd_home();
+    lcd_print_int(ccstack->changed[1].value);
+}
+>>>>>>> rework-ccstack
 
 // void lcd_debug_btn_stack(BtnStack_t *btn_stack){
 //     uint8_t num = btn_stack->stack[0];
 //     char msg[32];
+<<<<<<< HEAD
+=======
+//     lcd_clear();
+>>>>>>> rework-ccstack
 //     sprintf(msg, "%d", num);
 //     lcd_print(msg);
 // }
