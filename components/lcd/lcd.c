@@ -29,27 +29,15 @@ void lcd_home(){
     lcd_send_raw(command);
 }
 
-<<<<<<< HEAD
-// void lcd_debug_ccstack(CCStack_t *ccstack){
-//     uint8_t num = ccstack->ids[0];
-//     char msg[32];
-//     sprintf(msg, "%d", num);
-//     lcd_print(msg);
-// }
-=======
 void lcd_debug_ccstack(ccStack_t *ccstack){
     lcd_home();
     lcd_print_int(ccstack->changed[1].value);
 }
->>>>>>> rework-ccstack
 
 // void lcd_debug_btn_stack(BtnStack_t *btn_stack){
 //     uint8_t num = btn_stack->stack[0];
 //     char msg[32];
-<<<<<<< HEAD
-=======
 //     lcd_clear();
->>>>>>> rework-ccstack
 //     sprintf(msg, "%d", num);
 //     lcd_print(msg);
 // }
