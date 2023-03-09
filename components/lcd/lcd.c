@@ -7,13 +7,13 @@ static void lcd_send_raw(char msg_str[]){
 }
 
 void lcd_print(char msg[]){
-    char command[CMD_MAX_LENGTH];
+    char command[] = "print()";
     sprintf(command, "print(%s)", msg);
     lcd_send_raw(command);
 }
 
 void lcd_print_int(uint32_t num){
-    char command[CMD_MAX_LENGTH];
+    char command[] = "print()";
     sprintf(command, "print(%u)", num);
     lcd_send_raw(command);
 }
@@ -30,8 +30,11 @@ void lcd_home(){
 }
 
 void lcd_debug_ccstack(ccStack_t *ccstack){
+    // lcd_clear();
     lcd_home();
-    lcd_print_int(ccstack->changed[1].value);
+    char msg[32];
+    sprintf(msg, "%d - %d", ccstack->changed[0].id, ccstack->changed[0].value);
+    lcd_print(msg);
 }
 
 // void lcd_debug_btn_stack(BtnStack_t *btn_stack){
