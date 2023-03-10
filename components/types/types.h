@@ -4,11 +4,17 @@
 #define NUM_OF_BTNS 16
 #define NUM_OF_CC 8
 
-typedef struct BtnStack
+typedef struct btnRead
 {
-    uint8_t stack[NUM_OF_BTNS];
+    uint8_t id;
+    uint8_t key_down;
+} btnRead_t;
+
+typedef struct btnStack
+{
+    btnRead_t stack[NUM_OF_BTNS];
     uint8_t lenght;
-} BtnStack_t;
+} btnStack_t;
 
 typedef struct ccread
 {

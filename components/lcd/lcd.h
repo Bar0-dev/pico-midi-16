@@ -18,6 +18,6 @@ void lcd_print_int(uint32_t num);
 void lcd_clear();
 void lcd_home();
 void lcd_debug_ccstack(ccStack_t *ccstack);
-// void lcd_debug_btn_stack(BtnStack_t *btn_stack);
+void lcd_debug_btn_stack(btnStack_t *btns);
 
 #endif

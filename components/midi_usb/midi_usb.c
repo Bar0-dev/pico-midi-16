@@ -50,22 +50,18 @@ void tud_resume_cb(void)
 uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
 uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22};
 
-void midi_start(uint8_t btn)
-{
-  uint8_t note_on[3] = { 0x90 | CHANNEL, notes[btn], 127 };
-  tud_midi_stream_write(CABLE_NUM, note_on, 3);
+void midi_send_note(uint8_t btn, uint8_t key_down){
+  uint8_t note[3];
+  if(key_down){
+    note[0] = (0x90);
+    note[2] = 127;
+  } else {
+    note[0] = (0x80);
+    note[2] = 0;
+  }
+  note[1] = CHANNEL;
+  tud_midi_stream_write(CABLE_NUM, note, 3);
 
-  // The MIDI interface always creates input and output port/jack descriptors
-  // regardless of these being used or not. Therefore incoming traffic should be read
-  // (possibly just discarded) to avoid the sender blocking in IO
-  // uint8_t packet[4];
-  // while ( tud_midi_available() ) tud_midi_packet_read(packet);
-}
-
-void midi_stop(uint8_t btn)
-{
-  uint8_t note_off[3] = { 0x80 | CHANNEL, notes[btn], 0 };
-  tud_midi_stream_write(CABLE_NUM, note_off, 3);
 }
 
 void midi_send_cc(uint8_t cc_num, uint8_t value){

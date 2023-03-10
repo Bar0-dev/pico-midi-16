@@ -37,13 +37,12 @@ void lcd_debug_ccstack(ccStack_t *ccstack){
     lcd_print(msg);
 }
 
-// void lcd_debug_btn_stack(BtnStack_t *btn_stack){
-//     uint8_t num = btn_stack->stack[0];
-//     char msg[32];
-//     lcd_clear();
-//     sprintf(msg, "%d", num);
-//     lcd_print(msg);
-// }
+void lcd_debug_btn_stack(btnStack_t *btns){
+    if(btns->stack[0].key_down){
+        lcd_home();
+        lcd_print_int(btns->stack[0].id); 
+    }
+}
 
 void lcd_init(){
     i2c_init(i2c_default, I2C_BAUDRATE);

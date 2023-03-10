@@ -1,26 +1,44 @@
 #include "controls.h"
 
 static uint8_t btn_pins[NUM_OF_BTNS];
+static uint16_t btn_mask_old;
+
 static uint8_t cc_pins[NUM_OF_CC];
 static uint8_t old_cc[NUM_OF_CC];
 static uint8_t current_cc[NUM_OF_CC];
 
+static uint16_t buttons_get_mask(){
+    uint16_t mask;
+    for(int i=0; i<NUM_OF_BTNS; i++){
+        if(gpio_get(btn_pins[i])){
+            mask |= 1 << i;
+        } else {
+            mask &= ~(1 << i);
+        }
+    }
+    return mask;
+}
+
+void update_buttons(btnStack_t *btns){
+    uint16_t current_mask = buttons_get_mask();
+    for(int i=0, j=0; i<NUM_OF_BTNS; i++){
+        if((current_mask ^ btn_mask_old) & (1 << i)){
+            btns->stack[j].id = i;
+            btns->stack[j].key_down = (current_mask & (1 << i));
+            j++;
+            btns->lenght = j;
+        }
+    }
+    btn_mask_old = current_mask;
+}
+
 void buttons_init(uint8_t button_pins[]){
     memcpy(btn_pins, button_pins, sizeof(uint8_t)*NUM_OF_BTNS);
+    btn_mask_old = buttons_get_mask();
     for(int i=0; i<NUM_OF_BTNS; i++){
         gpio_init(btn_pins[i]);
         gpio_set_dir(btn_pins[i], false);
         gpio_pull_up(btn_pins[i]);
-    }
-}
-
-void buttons_pooling(BtnStack_t *btn_stack){
-    for(int i=0, j=0; i<NUM_OF_BTNS; i++){
-        if(!gpio_get(btn_pins[i])){
-            btn_stack->stack[j] = btn_pins[i]+1;
-            btn_stack->lenght = j+1;
-            j++;
-        }
     }
 }
 
