@@ -53,13 +53,13 @@ uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22};
 void midi_send_note(uint8_t btn, uint8_t key_down){
   uint8_t note[3];
   if(key_down){
-    note[0] = (0x90);
+    note[0] = 0x90 | CHANNEL;
     note[2] = 127;
   } else {
-    note[0] = (0x80);
+    note[0] = 0x80 | CHANNEL;
     note[2] = 0;
   }
-  note[1] = CHANNEL;
+  note[1] = notes[btn];
   tud_midi_stream_write(CABLE_NUM, note, 3);
 
 }

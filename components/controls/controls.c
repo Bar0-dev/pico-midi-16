@@ -10,7 +10,7 @@ static uint8_t current_cc[NUM_OF_CC];
 static uint16_t buttons_get_mask(){
     uint16_t mask;
     for(int i=0; i<NUM_OF_BTNS; i++){
-        if(gpio_get(btn_pins[i])){
+        if(!gpio_get(btn_pins[i])){
             mask |= 1 << i;
         } else {
             mask &= ~(1 << i);
