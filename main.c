@@ -51,6 +51,13 @@ void handle_cc(void *arg){
     }
 }
 
+void handle_aux_buttons(void *arg){
+    while(1){
+        aux_btns_update();
+        vTaskDelay(100/portTICK_PERIOD_MS);
+    }
+}
+
 void usb_task(void *arg){
     while(1){
         tud_task();
@@ -58,22 +65,24 @@ void usb_task(void *arg){
     }
 }
 
-void blink(void *arg){
-    uint32_t blink_interval;
-    while(1){
-        blink_interval = led_interval();
-        gpio_put(PICO_DEFAULT_LED_PIN, 1);
-        vTaskDelay(blink_interval/portTICK_PERIOD_MS);
-        gpio_put(PICO_DEFAULT_LED_PIN, 0);
-        vTaskDelay(blink_interval/portTICK_PERIOD_MS);
-    }
-}
+
+// void blink(void *arg){
+//     uint32_t blink_interval;
+//     while(1){
+//         blink_interval = led_interval();
+//         gpio_put(PICO_DEFAULT_LED_PIN, 1);
+//         vTaskDelay(blink_interval/portTICK_PERIOD_MS);
+//         gpio_put(PICO_DEFAULT_LED_PIN, 0);
+//         vTaskDelay(blink_interval/portTICK_PERIOD_MS);
+//     }
+// }
 
 int main() {
     //setup
     stdio_init_all();
     buttons_init(btn_pins);
     cc_init(cc_mux_channels);
+    aux_btns_init(aux_btns_mux_channels);
     mux_init(cc_select_pins, CC_SIG_PIN, true, true);
     lcd_init();
     midi_init();
@@ -84,9 +93,8 @@ int main() {
     //main tasks
     xTaskCreate(handle_buttons, "buttons-pooling-task", 1024, NULL, 10, NULL);
     xTaskCreate(handle_cc, "cc-polling-task", 1024, NULL, 9, NULL);
+    xTaskCreate(handle_aux_buttons, "aux-buttons-pooling-task", 1024, NULL, 8, NULL);
     xTaskCreate(usb_task, "usb-task", 256, NULL, 15, NULL);
-
-    xTaskCreate(blink, "blink", 256, NULL, 5, NULL);
 
     vTaskStartScheduler();
     while(1){
