@@ -24,7 +24,7 @@ void update_buttons(btnStack_t *btns){
     for(int i=0, j=0; i<NUM_OF_BTNS; i++){
         if((current_mask ^ btn_mask_old) & (1 << i)){
             btns->stack[j].id = i;
-            btns->stack[j].key_down = (current_mask & (1 << i));
+            btns->stack[j].key_down = (bool)(current_mask & (1 << i));
             j++;
             btns->lenght = j;
         }
