@@ -3,6 +3,7 @@
 static void lcd_send_raw(char msg_str[]){
     if(i2c_get_write_available(i2c_default)){
         i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, msg_str, CMD_MAX_LENGTH, true);
+        i2c_write_blocking(i2c_default, LCD_CONTROLLER_ADDR, "", CMD_MAX_LENGTH, true);
     }
 }
 
@@ -18,7 +19,6 @@ void lcd_print_int(uint32_t num){
     lcd_send_raw(command);
 }
 
-
 void lcd_clear(){
     char command[] = "clear()";
     lcd_send_raw(command);
@@ -29,18 +29,9 @@ void lcd_home(){
     lcd_send_raw(command);
 }
 
-void lcd_debug_ccstack(ccStack_t *ccstack){
-    // lcd_clear();
-    lcd_home();
-    char msg[32];
-    sprintf(msg, "%d - %d", ccstack->changed[0].id, ccstack->changed[0].value);
-    lcd_print(msg);
-}
-
-void lcd_debug_btn_stack(btnStack_t *btns){
-    if(btns->stack[0].key_down){
-        lcd_home();
-        lcd_print_int(btns->stack[0].id); 
+void lcd_print_notes(uint8_t notes[]){
+    for(int i = 0; i<NUM_OF_BTNS; i++){
+        
     }
 }
 

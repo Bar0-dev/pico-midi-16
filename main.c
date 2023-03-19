@@ -25,13 +25,14 @@ uint8_t aux_btns_mux_channels[] = {8, 9, 10};
 
 void handle_buttons(void *arg){
     btnStack_t btns;
+    btns.length=0;
 
     while(1){
         update_buttons(&btns);
-        for(int i=0; i<btns.lenght; i++){
+        for(int i=0; i<btns.length; i++){
             midi_send_note(btns.stack[i].id, btns.stack[i].key_down);
         }
-        btns.lenght = 0;
+        btns.length = 0;
         vTaskDelay(10/portTICK_PERIOD_MS);
     }
 }
@@ -52,8 +53,35 @@ void handle_cc(void *arg){
 }
 
 void handle_aux_buttons(void *arg){
+    auxBtnStack_t aux_btns;
+    aux_btns.length=0;
     while(1){
-        aux_btns_update();
+        aux_btns_update(&aux_btns);
+        for(int i=0; i<aux_btns.length; i++){
+            if(aux_btns.stack[i].key_down){
+                switch (aux_btns.stack[i].id)
+                {
+                case 0:
+                    lcd_clear();
+                    lcd_print("test1");
+                    break;
+
+                case 1:
+                    lcd_clear();
+                    lcd_print("test2");
+                    break;
+
+                case 2:
+                    lcd_clear();
+                    lcd_print("test3");
+                    break;
+                
+                default:
+                    break;
+                }
+            }
+        }
+        aux_btns.length = 0;
         vTaskDelay(100/portTICK_PERIOD_MS);
     }
 }
@@ -82,8 +110,8 @@ int main() {
     stdio_init_all();
     buttons_init(btn_pins);
     cc_init(cc_mux_channels);
-    aux_btns_init(aux_btns_mux_channels);
     mux_init(cc_select_pins, CC_SIG_PIN, true, true);
+    aux_btns_init(aux_btns_mux_channels);
     lcd_init();
     midi_init();
 

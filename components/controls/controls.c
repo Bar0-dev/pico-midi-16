@@ -8,6 +8,7 @@ static uint8_t old_cc[NUM_OF_CC];
 static uint8_t current_cc[NUM_OF_CC];
 
 static uint8_t aux_btn_pins[NUM_OF_AUX_BTNS];
+static uint8_t aux_btn_mask_old;
 
 static uint16_t buttons_get_mask(){
     uint16_t mask;
@@ -28,7 +29,7 @@ void update_buttons(btnStack_t *btns){
             btns->stack[j].id = i;
             btns->stack[j].key_down = (bool)(current_mask & (1 << i));
             j++;
-            btns->lenght = j;
+            btns->length = j;
         }
     }
     btn_mask_old = current_mask;
@@ -90,23 +91,20 @@ static uint8_t aux_btns_get_mask(){
     return btns_mask;
 }
 
-void aux_btns_update(){
-    uint8_t btns_mask = aux_btns_get_mask();
-    for(int i=0; i<NUM_OF_AUX_BTNS; i++){
-        bool btn_state = (bool)(btns_mask & (1<<i));
-        if(i == 0 && btn_state){
-            lcd_clear();
+void aux_btns_update(auxBtnStack_t *btns){
+    uint8_t current_mask = aux_btns_get_mask();
+    for(int i=0, j=0; i<NUM_OF_AUX_BTNS; i++){
+        if((current_mask ^ aux_btn_mask_old) & (1 << i)){
+            btns->stack[j].id = i;
+            btns->stack[j].key_down = (bool)(current_mask & (1 << i));
+            j++;
+            btns->length = j;
         }
-        if(i == 1 && btn_state){
-            lcd_print("+");
-        }
-        if(i == 2 && btn_state){
-            lcd_print("0");
-        }
-
     }
+    aux_btn_mask_old = current_mask;
 }
 
 void aux_btns_init(uint8_t mux_channels[]){
     memcpy(aux_btn_pins, mux_channels, sizeof(uint8_t)*NUM_OF_AUX_BTNS);
+    aux_btn_mask_old = aux_btns_get_mask();
 }
