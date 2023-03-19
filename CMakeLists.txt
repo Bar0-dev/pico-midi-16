@@ -21,7 +21,7 @@ if (TARGET tinyusb_device)
             )
 
     # pull in common dependencies
-    target_link_libraries(main pico_stdlib freertos controls lcd mux midi_usb)
+    target_link_libraries(main pico_stdlib freertos controls lcd_os mux midi_usb)
 
 
     # enable usb output, disable uart output

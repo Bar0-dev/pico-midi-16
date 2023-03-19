@@ -1,7 +1,7 @@
 #include "lcd.h"
 
-static bool edit_mode = false;
 cursor_t cursor_pos;
+cursor_t selector;
 
 static void lcd_send_raw(char msg_str[]){
     if(i2c_get_write_available(i2c_default)){
@@ -39,6 +39,13 @@ static void cursor_down(cursor_t *pos){
     lcd_set_cursor(pos);
 }
 
+void lcd_new_line(){
+    cursor_t new_line;
+    new_line.col=0;
+    new_line.row=1;
+    lcd_set_cursor(&new_line);
+}
+
 void lcd_print(char msg[]){
     char command[CMD_MAX_LENGTH];
     sprintf(command, "print(%s)", msg);
@@ -63,20 +70,6 @@ void lcd_home(){
     cursor_reset(&cursor_pos);
 }
 
-void lcd_print_notes(uint8_t notes[]){
-    char command[] = "print(000 )";
-    cursor_t new_line;
-    new_line.col=0;
-    new_line.row=1;
-    for(int i = 0; i<NUM_OF_BTNS; i++){
-        sprintf(command, "print(%u )", notes[i]);
-        if(i == (uint8_t)(NUM_OF_BTNS/2)){
-            lcd_set_cursor(&new_line);
-        }
-        lcd_send_raw(command);
-    }
-}
-
 void lcd_cursor(){
     char command[] = "cursor()";
     lcd_send_raw(command);
@@ -95,33 +88,6 @@ void lcd_blink(){
 void lcd_no_blink(){
     char command[] = "noBlink()";
     lcd_send_raw(command);
-}
-
-void lcd_update(uint8_t button_id){
-    switch (button_id)
-    {
-    case 0:
-        lcd_print("hello");
-        break;
-    
-    case 1:
-        if(edit_mode) cursor_down(&cursor_pos);
-        break;
-    case 2:
-        if(edit_mode) cursor_right(&cursor_pos);
-        break;
-    case 3:
-        edit_mode = !edit_mode;
-        if(edit_mode){
-            lcd_cursor();
-        }else{
-            lcd_no_cursor();
-        }
-        break;
-    
-    default:
-        break;
-    }
 }
 
 void lcd_init(){

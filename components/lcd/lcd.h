@@ -1,11 +1,11 @@
 #ifndef LCD_H
 #define LCD_H
 
+#include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "pico/binary_info.h"
 #include "../types/types.h"
-#include <stdio.h>
 
 #define PICO_I2C_SDA_PIN 20
 #define PICO_I2C_SCL_PIN 21
@@ -20,7 +20,6 @@ void lcd_print(char msg[]);
 void lcd_print_int(uint32_t num);
 void lcd_clear();
 void lcd_home();
-void lcd_print_notes(uint8_t notes[]);
-void lcd_update(uint8_t button_id);
+void lcd_new_line();
 
 #endif

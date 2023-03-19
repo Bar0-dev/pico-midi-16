@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "components/lcd/lcd.h"
+#include "components/lcd/lcd_os.h"
 #include "components/controls/controls.h"
 #include "components/midi_usb/midi_usb.h"
 #include "components/types/types.h"
@@ -13,10 +13,13 @@
 //defines
 #define CC_SIG_PIN 27
 #define MENU_BTN_PIN 22
+#define EDIT_BTN 3
+#define NOTE_UP_BTN 2
+#define NOTE_DOWN_BTN 1
 
 //Global variables
 //For buttons connected dicetly to th pico GPIO in order from 0 -> 16
-uint8_t btn_pins[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+uint8_t btn_pins[] = {12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3};
 /*16 bit variable reperesents 16 buttons inputs state, one bit for each
 if more buttons is used this needs to be expanded to 32 bit variable or higher*/
 uint8_t cc_select_pins[] = {16, 17, 18, 19};
@@ -24,8 +27,11 @@ uint8_t cc_mux_channels[] = {0, 1, 2, 3, 4, 5, 6, 11};
 //on mux channels for aux buttons
 uint8_t aux_btns_mux_channels[] = {8, 9, 10};
 
-uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
+uint8_t notes[] = {60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 74, 75};
 uint8_t ccs[] = {7, 3, 9, 14, 15, 20, 21, 22};
+
+bool edit_mode = false;
+btnRead_t to_edit;
 
 void handle_buttons(void *arg){
     btnStack_t btns;
@@ -34,10 +40,17 @@ void handle_buttons(void *arg){
     while(1){
         update_buttons(&btns);
         for(int i=0; i<btns.length; i++){
-            midi_send_note(btns.stack[i].id, btns.stack[i].key_down, notes);
+            if(!edit_mode){
+                midi_send_note(btns.stack[i].key_down, notes[btns.stack[i].id]);
+            }else {
+                if(btns.stack[i].key_down){
+                    lcd_os_show_note(btns.stack[i].id, notes[btns.stack[i].id]);
+                    to_edit = btns.stack[i];
+                }
+            }
         }
         btns.length = 0;
-        vTaskDelay(10/portTICK_PERIOD_MS);
+        vTaskDelay(1/portTICK_PERIOD_MS);
     }
 }
 
@@ -48,11 +61,11 @@ void handle_cc(void *arg){
         cc_update(&cc_stack);
         if(cc_stack.count){
             for(int i=0; i<cc_stack.count; i++){
-                midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value, ccs);
+                midi_send_cc(cc_stack.changed[i].value, ccs[cc_stack.changed[i].id]);
             }
         }
         cc_stack.count = 0;
-        vTaskDelay(200/portTICK_PERIOD_MS);
+        vTaskDelay(100/portTICK_PERIOD_MS);
     }
 }
 
@@ -64,7 +77,26 @@ void handle_aux_buttons(void *arg){
         aux_btns_update(&aux_btns);
         for(i=0; i<aux_btns.length; i++){
             if(aux_btns.stack[i].key_down){
-                lcd_update(aux_btns.stack[i].id);
+                if(aux_btns.stack[i].id == EDIT_BTN){
+                    edit_mode = !edit_mode;
+                    if(edit_mode){
+                        lcd_os_show_edit();
+                    } else {
+                        lcd_os_show_home();
+                    }
+                }
+                if(aux_btns.stack[i].id == NOTE_UP_BTN){
+                    if(edit_mode){
+                        notes[to_edit.id] += 1;
+                        lcd_os_show_note(to_edit.id, notes[to_edit.id]);
+                    }
+                }
+                if(aux_btns.stack[i].id == NOTE_DOWN_BTN){
+                    if(edit_mode){
+                        notes[to_edit.id] -= 1;
+                        lcd_os_show_note(to_edit.id, notes[to_edit.id]);
+                    }
+                }
             }
         }
         aux_btns.length = 0;
@@ -101,7 +133,7 @@ int main() {
     lcd_init();
     midi_init();
 
-    lcd_print_notes(notes);
+    lcd_os_show_home();
 
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);

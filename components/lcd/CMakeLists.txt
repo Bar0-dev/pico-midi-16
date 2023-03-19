@@ -1,3 +1,3 @@
 file(GLOB FILES *.c *.h)
-add_library(lcd ${FILES})
-target_link_libraries(lcd pico_stdlib hardware_i2c)
+add_library(lcd_os ${FILES})
+target_link_libraries(lcd_os pico_stdlib hardware_i2c)
