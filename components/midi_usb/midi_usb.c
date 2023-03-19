@@ -47,10 +47,7 @@ void tud_resume_cb(void)
   blink_interval_ms = BLINK_MOUNTED;
 }
 
-uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
-uint8_t cc_setup[] = {7, 3, 9, 14, 15, 20, 21, 22};
-
-void midi_send_note(uint8_t btn, uint8_t key_down){
+void midi_send_note(uint8_t btn, uint8_t key_down, uint8_t notes_setup[]){
   uint8_t note[3];
   if(key_down){
     note[0] = 0x90 | CHANNEL;
@@ -59,12 +56,12 @@ void midi_send_note(uint8_t btn, uint8_t key_down){
     note[0] = 0x80 | CHANNEL;
     note[2] = 0;
   }
-  note[1] = notes[btn];
+  note[1] = notes_setup[btn];
   tud_midi_stream_write(CABLE_NUM, note, 3);
 
 }
 
-void midi_send_cc(uint8_t cc_num, uint8_t value){
+void midi_send_cc(uint8_t cc_num, uint8_t value, uint8_t cc_setup[]){
   uint8_t cc_msg[3] = { 0xB0 | CHANNEL, cc_setup[cc_num], value};
   tud_midi_stream_write(CABLE_NUM, cc_msg, 3);
 }

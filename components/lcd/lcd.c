@@ -73,6 +73,7 @@ void lcd_print_notes(uint8_t notes[]){
         if(i == (uint8_t)(NUM_OF_BTNS/2)){
             lcd_set_cursor(&new_line);
         }
+        lcd_send_raw(command);
     }
 }
 

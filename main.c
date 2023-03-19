@@ -24,6 +24,9 @@ uint8_t cc_mux_channels[] = {0, 1, 2, 3, 4, 5, 6, 11};
 //on mux channels for aux buttons
 uint8_t aux_btns_mux_channels[] = {8, 9, 10};
 
+uint8_t notes[] = {72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87};
+uint8_t ccs[] = {7, 3, 9, 14, 15, 20, 21, 22};
+
 void handle_buttons(void *arg){
     btnStack_t btns;
     btns.length=0;
@@ -31,7 +34,7 @@ void handle_buttons(void *arg){
     while(1){
         update_buttons(&btns);
         for(int i=0; i<btns.length; i++){
-            midi_send_note(btns.stack[i].id, btns.stack[i].key_down);
+            midi_send_note(btns.stack[i].id, btns.stack[i].key_down, notes);
         }
         btns.length = 0;
         vTaskDelay(10/portTICK_PERIOD_MS);
@@ -45,7 +48,7 @@ void handle_cc(void *arg){
         cc_update(&cc_stack);
         if(cc_stack.count){
             for(int i=0; i<cc_stack.count; i++){
-                midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value);
+                midi_send_cc(cc_stack.changed[i].id, cc_stack.changed[i].value, ccs);
             }
         }
         cc_stack.count = 0;
@@ -97,6 +100,8 @@ int main() {
     aux_btns_init(aux_btns_mux_channels, MENU_BTN_PIN);
     lcd_init();
     midi_init();
+
+    lcd_print_notes(notes);
 
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
