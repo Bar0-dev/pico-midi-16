@@ -12,6 +12,7 @@
 
 //defines
 #define CC_SIG_PIN 27
+#define MENU_BTN_PIN 22
 
 //Global variables
 //For buttons connected dicetly to th pico GPIO in order from 0 -> 16
@@ -55,30 +56,12 @@ void handle_cc(void *arg){
 void handle_aux_buttons(void *arg){
     auxBtnStack_t aux_btns;
     aux_btns.length=0;
+    static int i=0;
     while(1){
         aux_btns_update(&aux_btns);
-        for(int i=0; i<aux_btns.length; i++){
+        for(i=0; i<aux_btns.length; i++){
             if(aux_btns.stack[i].key_down){
-                switch (aux_btns.stack[i].id)
-                {
-                case 0:
-                    lcd_clear();
-                    lcd_print("test1");
-                    break;
-
-                case 1:
-                    lcd_clear();
-                    lcd_print("test2");
-                    break;
-
-                case 2:
-                    lcd_clear();
-                    lcd_print("test3");
-                    break;
-                
-                default:
-                    break;
-                }
+                lcd_update(aux_btns.stack[i].id);
             }
         }
         aux_btns.length = 0;
@@ -111,7 +94,7 @@ int main() {
     buttons_init(btn_pins);
     cc_init(cc_mux_channels);
     mux_init(cc_select_pins, CC_SIG_PIN, true, true);
-    aux_btns_init(aux_btns_mux_channels);
+    aux_btns_init(aux_btns_mux_channels, MENU_BTN_PIN);
     lcd_init();
     midi_init();
 

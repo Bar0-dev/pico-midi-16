@@ -35,4 +35,10 @@ typedef struct auxBtnStack
     uint8_t length;
 } auxBtnStack_t;
 
+typedef struct cursor
+{
+    uint8_t row;
+    uint8_t col;
+} cursor_t;
+
 #endif

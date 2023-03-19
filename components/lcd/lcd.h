@@ -12,10 +12,15 @@
 #define I2C_BAUDRATE 400000
 #define LCD_CONTROLLER_ADDR 80
 #define CMD_MAX_LENGTH 32
+#define LCD_ROWS 2
+#define LCD_COLS 16
+
 void lcd_init();
 void lcd_print(char msg[]);
 void lcd_print_int(uint32_t num);
 void lcd_clear();
 void lcd_home();
+void lcd_print_notes(uint8_t notes[]);
+void lcd_update(uint8_t button_id);
 
 #endif

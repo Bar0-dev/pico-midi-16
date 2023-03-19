@@ -13,7 +13,7 @@ void buttons_init(uint8_t button_pins[]);
 void update_buttons(btnStack_t *btns);
 void cc_init(uint8_t mux_channels[]);
 void cc_update(ccStack_t *cc_stack);
-void aux_btns_init(uint8_t mux_channels[]);
+void aux_btns_init(uint8_t mux_channels[], uint8_t menu_btn_pin);
 void aux_btns_update(auxBtnStack_t *btn_stack);
 
 #endif

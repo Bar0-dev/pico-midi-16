@@ -9,6 +9,7 @@ static uint8_t current_cc[NUM_OF_CC];
 
 static uint8_t aux_btn_pins[NUM_OF_AUX_BTNS];
 static uint8_t aux_btn_mask_old;
+static uint8_t menu_pin;
 
 static uint16_t buttons_get_mask(){
     uint16_t mask;
@@ -88,12 +89,13 @@ static uint8_t aux_btns_get_mask(){
             btns_mask |= 1<<i;
         }
     }
+    btns_mask |= !gpio_get(menu_pin)<<(NUM_OF_AUX_BTNS);
     return btns_mask;
 }
 
 void aux_btns_update(auxBtnStack_t *btns){
     uint8_t current_mask = aux_btns_get_mask();
-    for(int i=0, j=0; i<NUM_OF_AUX_BTNS; i++){
+    for(int i=0, j=0; i<(NUM_OF_AUX_BTNS+1); i++){
         if((current_mask ^ aux_btn_mask_old) & (1 << i)){
             btns->stack[j].id = i;
             btns->stack[j].key_down = (bool)(current_mask & (1 << i));
@@ -104,7 +106,11 @@ void aux_btns_update(auxBtnStack_t *btns){
     aux_btn_mask_old = current_mask;
 }
 
-void aux_btns_init(uint8_t mux_channels[]){
+void aux_btns_init(uint8_t mux_channels[], uint8_t menu_btn_pin){
     memcpy(aux_btn_pins, mux_channels, sizeof(uint8_t)*NUM_OF_AUX_BTNS);
     aux_btn_mask_old = aux_btns_get_mask();
+    menu_pin = menu_btn_pin;
+    gpio_init(menu_pin);
+    gpio_set_dir(menu_pin, false);
+    gpio_pull_up(menu_pin);
 }
