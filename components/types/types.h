@@ -41,4 +41,10 @@ typedef struct cursor
     uint8_t col;
 } cursor_t;
 
+typedef struct lookup_note
+{
+    char str[4];
+} lookupNote_t;
+
+
 #endif
