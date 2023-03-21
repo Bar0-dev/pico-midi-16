@@ -8,11 +8,11 @@
 #include "../midi_usb/midi_usb.h"
 #include "../lcd/lcd_os.h"
 
-#define CC_POT_THRESHOLD 5
+#define CC_POT_THRESHOLD 3
 #define AUX_BTN_THRESHOLD 2000
 #define MODE_BTN 3
-#define NOTE_UP_BTN 2
-#define NOTE_DOWN_BTN 1
+#define UP_BTN 2
+#define DOWN_BTN 1
 #define CHANGE_OCTAVE_BTN 0
 
 void buttons_init(uint8_t button_pins[]);

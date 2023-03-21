@@ -42,9 +42,9 @@ void button_press_action(btnStack_t *btns, state_t *state_now){
                 midi_send_note(btns->stack[i].key_down, state_now->notes[btns->stack[i].id]);
                 lcd_os_show_note(state_now->notes[btns->stack[i].id]);
             }
-            if(state_now->mode == EDIT_MODE) {
+            if(state_now->mode == EDIT_KEY_MODE) {
                 if(btns->stack[i].key_down){
-                    lcd_os_show_setting(btns->stack[i].id, state_now->notes[btns->stack[i].id]);
+                    lcd_os_show_key_setting(btns->stack[i].id, state_now->notes[btns->stack[i].id]);
                     state_now->note_to_edit = btns->stack[i];
                 }
             }
@@ -66,7 +66,7 @@ static void cc_read(uint8_t values[]){
     uint16_t readings[NUM_OF_CC];
     mux_read(readings, NUM_OF_CC, cc_pins);
     for(int i=0; i<NUM_OF_CC; i++){
-        values[i] = readings[i]>>5; //convert uint16_t into int8_t
+        values[i] = 127 - (readings[i]>>5); //convert uint16_t into int8_t
     }
 }
 
@@ -86,20 +86,25 @@ void cc_update(ccStack_t *cc_stack){
 void cc_change_action(ccStack_t *cc_stack, state_t *state_now){
     if(cc_stack->length){
             for(int i=0; i<cc_stack->length; i++){
-                midi_send_cc(cc_stack->changed[i].value, state_now->ccs[cc_stack->changed[i].id]);
+                switch (state_now->mode)
+                {
+                case MIDI_MODE:
+                    midi_send_cc(cc_stack->changed[i].value, state_now->ccs[cc_stack->changed[i].id]);
+                    lcd_os_show_cc(cc_stack->changed[i].id, state_now->ccs[cc_stack->changed[i].id],cc_stack->changed[i].value);
+                    break;
+                
+                case EDIT_CC_MODE:
+                    lcd_os_show_cc_setting(cc_stack->changed[i].id, state_now->ccs[cc_stack->changed[i].id]);
+                    state_now->cc_to_edit = cc_stack->changed[i];
+                    break;
+                
+                default:
+                    break;
+                }
             }
         }
         cc_stack->length = 0;
 }
-
-// void aux_btns_read(uint8_t btn_channels[], uint16_t state[]){
-//     uint16_t btn_read;
-//     for(int i=0; i<NUM_OF_AUX_BTNS; i++){
-//         mux_select_channel(btn_channels[i]);
-//         btn_read = adc_read();
-//         state[i] = btn_read;
-//     }
-// }
 
 void cc_init(uint8_t mux_channels[]){
     memcpy(cc_pins, mux_channels, sizeof(uint8_t)*NUM_OF_CC);
@@ -135,13 +140,57 @@ static void toggle_mode(state_t *now){
     switch (now->mode)
     {
     case MIDI_MODE:
-        now->mode = EDIT_MODE;
-        lcd_os_show_edit();
+        now->mode = EDIT_KEY_MODE;
+        lcd_os_show_key_edit();
         break;
     
-    case EDIT_MODE:
+    case EDIT_KEY_MODE:
+        now->mode = EDIT_CC_MODE;
+        lcd_os_show_cc_edit();
+        break;
+    
+    case EDIT_CC_MODE:
+        now->mode = DRUM_MACHINE_MODE;
+        lcd_os_show_drum_mode();
+        break;
+
+    case DRUM_MACHINE_MODE:
         now->mode = MIDI_MODE;
-        lcd_os_show_home();
+        lcd_os_show_midi_mode();
+        break;
+
+    default:
+        break;
+    }
+}
+
+static void up_btn_press_handle(state_t *now){
+    switch (now->mode)
+    {
+    case EDIT_KEY_MODE:
+        now->notes[now->note_to_edit.id] += 1;
+        lcd_os_show_key_setting(now->note_to_edit.id, now->notes[now->note_to_edit.id]);
+        break;
+    case EDIT_CC_MODE:
+        now->ccs[now->cc_to_edit.id] += 1;
+        lcd_os_show_cc_setting(now->cc_to_edit.id, now->ccs[now->cc_to_edit.id]);
+        break;
+    
+    default:
+        break;
+    }
+}
+
+static void down_btn_press_handle(state_t *now){
+    switch (now->mode)
+    {
+    case EDIT_KEY_MODE:
+        now->notes[now->note_to_edit.id] -= 1;
+        lcd_os_show_key_setting(now->note_to_edit.id, now->notes[now->note_to_edit.id]);
+        break;
+    case EDIT_CC_MODE:
+        now->ccs[now->cc_to_edit.id] -= 1;
+        lcd_os_show_cc_setting(now->cc_to_edit.id, now->ccs[now->cc_to_edit.id]);
         break;
     
     default:
@@ -157,18 +206,12 @@ void aux_buttons_press_action(auxBtnStack_t *btns, state_t *state_now){
                 toggle_mode(state_now);
                 break;
 
-            case NOTE_UP_BTN:
-                if(state_now->mode == EDIT_MODE){
-                    state_now->notes[state_now->note_to_edit.id] += 1;
-                    lcd_os_show_setting(state_now->note_to_edit.id, state_now->notes[state_now->note_to_edit.id]);
-                }
+            case UP_BTN:
+                up_btn_press_handle(state_now);
                 break;
 
-            case NOTE_DOWN_BTN:
-                if(state_now->mode == EDIT_MODE){
-                    state_now->notes[state_now->note_to_edit.id] -= 1;
-                    lcd_os_show_setting(state_now->note_to_edit.id, state_now->notes[state_now->note_to_edit.id]);
-                }
+            case DOWN_BTN:
+                down_btn_press_handle(state_now);
                 break;
 
             case CHANGE_OCTAVE_BTN:

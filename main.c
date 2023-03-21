@@ -96,9 +96,6 @@ int main() {
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
 
-
-    lcd_os_show_home();
-
     //main tasks
     xTaskCreate(handle_buttons, "buttons-pooling-task", 1024, NULL, 10, NULL);
     xTaskCreate(handle_cc, "cc-polling-task", 1024, NULL, 9, NULL);
