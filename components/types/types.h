@@ -5,6 +5,10 @@
 #define NUM_OF_CC 8
 #define NUM_OF_AUX_BTNS 3
 
+#define MIDI_MODE 0
+#define EDIT_MODE 1
+#define DRUM_MACHINE_MODE 2
+
 typedef struct btnRead
 {
     uint8_t id;
@@ -26,7 +30,7 @@ typedef struct ccread
 typedef struct ccStack
 {
     ccread_t changed[NUM_OF_CC];
-    uint8_t count;
+    uint8_t length;
 } ccStack_t;
 
 typedef struct auxBtnStack
@@ -46,5 +50,12 @@ typedef struct lookup_note
     char str[4];
 } lookupNote_t;
 
+typedef struct state
+{
+    uint8_t mode;
+    btnRead_t note_to_edit;
+    uint8_t notes[NUM_OF_BTNS];
+    uint8_t ccs[NUM_OF_CC];
+} state_t;
 
 #endif

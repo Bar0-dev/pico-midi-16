@@ -33,3 +33,10 @@ void lcd_os_show_note(uint8_t note_val){
     lcd_print(lookup[note_val%12].str);
     lcd_print_int(octave);
 }
+
+void lcd_os_show_octave(uint8_t note_val){
+    uint8_t octave = (uint8_t)((note_val-12)/12);
+    lcd_clear();
+    lcd_print("octave:");
+    lcd_print_int(octave);
+}

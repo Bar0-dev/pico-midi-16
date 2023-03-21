@@ -36,6 +36,22 @@ void update_buttons(btnStack_t *btns){
     btn_mask_old = current_mask;
 }
 
+void button_press_action(btnStack_t *btns, state_t *state_now){
+    for(int i=0; i<btns->length; i++){
+            if(state_now->mode == MIDI_MODE){
+                midi_send_note(btns->stack[i].key_down, state_now->notes[btns->stack[i].id]);
+                lcd_os_show_note(state_now->notes[btns->stack[i].id]);
+            }
+            if(state_now->mode == EDIT_MODE) {
+                if(btns->stack[i].key_down){
+                    lcd_os_show_setting(btns->stack[i].id, state_now->notes[btns->stack[i].id]);
+                    state_now->note_to_edit = btns->stack[i];
+                }
+            }
+        }
+        btns->length = 0;
+}
+
 void buttons_init(uint8_t button_pins[]){
     memcpy(btn_pins, button_pins, sizeof(uint8_t)*NUM_OF_BTNS);
     btn_mask_old = buttons_get_mask();
@@ -61,10 +77,19 @@ void cc_update(ccStack_t *cc_stack){
             cc_stack->changed[j].id = i;
             cc_stack->changed[j].value = current_cc[i];
             j++;
-            cc_stack->count = j;
+            cc_stack->length = j;
         }
     }
     memcpy(old_cc, current_cc, sizeof(uint8_t)*NUM_OF_CC);
+}
+
+void cc_change_action(ccStack_t *cc_stack, state_t *state_now){
+    if(cc_stack->length){
+            for(int i=0; i<cc_stack->length; i++){
+                midi_send_cc(cc_stack->changed[i].value, state_now->ccs[cc_stack->changed[i].id]);
+            }
+        }
+        cc_stack->length = 0;
 }
 
 // void aux_btns_read(uint8_t btn_channels[], uint16_t state[]){
@@ -104,6 +129,67 @@ void aux_btns_update(auxBtnStack_t *btns){
         }
     }
     aux_btn_mask_old = current_mask;
+}
+
+static void toggle_mode(state_t *now){
+    switch (now->mode)
+    {
+    case MIDI_MODE:
+        now->mode = EDIT_MODE;
+        lcd_os_show_edit();
+        break;
+    
+    case EDIT_MODE:
+        now->mode = MIDI_MODE;
+        lcd_os_show_home();
+        break;
+    
+    default:
+        break;
+    }
+}
+
+void aux_buttons_press_action(auxBtnStack_t *btns, state_t *state_now){
+    for(int i=0; i<btns->length; i++){
+        if(btns->stack[i].key_down){
+            switch (btns->stack[i].id){
+            case MODE_BTN:
+                toggle_mode(state_now);
+                break;
+
+            case NOTE_UP_BTN:
+                if(state_now->mode == EDIT_MODE){
+                    state_now->notes[state_now->note_to_edit.id] += 1;
+                    lcd_os_show_setting(state_now->note_to_edit.id, state_now->notes[state_now->note_to_edit.id]);
+                }
+                break;
+
+            case NOTE_DOWN_BTN:
+                if(state_now->mode == EDIT_MODE){
+                    state_now->notes[state_now->note_to_edit.id] -= 1;
+                    lcd_os_show_setting(state_now->note_to_edit.id, state_now->notes[state_now->note_to_edit.id]);
+                }
+                break;
+
+            case CHANGE_OCTAVE_BTN:
+                if(state_now->notes[NUM_OF_BTNS-1]+12<=127){
+                    for(int i=0; i<NUM_OF_BTNS; i++){
+                        state_now->notes[i] += 12;
+                    }
+                } else {
+                    for(int i=0; i<NUM_OF_BTNS; i++){
+                        state_now->notes[i] = 24+i;
+                    }
+                }
+                lcd_os_show_octave(state_now->notes[0]);
+                break;
+
+            default:
+                break;
+            }
+        }
+    }
+    btns->length = 0;
 }
 
 void aux_btns_init(uint8_t mux_channels[], uint8_t menu_btn_pin){
