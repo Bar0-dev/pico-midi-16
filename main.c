@@ -32,7 +32,6 @@ uint8_t ccs[] = {7, 3, 9, 14, 15, 20, 21, 22};
 
 bool edit_mode = false;
 btnRead_t to_edit;
-uint8_t octave=4;
 
 void handle_buttons(void *arg){
     btnStack_t btns;
@@ -43,10 +42,10 @@ void handle_buttons(void *arg){
         for(int i=0; i<btns.length; i++){
             if(!edit_mode){
                 midi_send_note(btns.stack[i].key_down, notes[btns.stack[i].id]);
-                lcd_os_show_note(notes[btns.stack[i].id], octave);
+                lcd_os_show_note(notes[btns.stack[i].id]);
             }else {
                 if(btns.stack[i].key_down){
-                    lcd_os_show_setting(btns.stack[i].id, notes[btns.stack[i].id], octave);
+                    lcd_os_show_setting(btns.stack[i].id, notes[btns.stack[i].id]);
                     to_edit = btns.stack[i];
                 }
             }
@@ -90,13 +89,13 @@ void handle_aux_buttons(void *arg){
                 if(aux_btns.stack[i].id == NOTE_UP_BTN){
                     if(edit_mode){
                         notes[to_edit.id] += 1;
-                        lcd_os_show_setting(to_edit.id, notes[to_edit.id], octave);
+                        lcd_os_show_setting(to_edit.id, notes[to_edit.id]);
                     }
                 }
                 if(aux_btns.stack[i].id == NOTE_DOWN_BTN){
                     if(edit_mode){
                         notes[to_edit.id] -= 1;
-                        lcd_os_show_setting(to_edit.id, notes[to_edit.id], octave);
+                        lcd_os_show_setting(to_edit.id, notes[to_edit.id]);
                     }
                 }
             }
@@ -135,10 +134,11 @@ int main() {
     lcd_init();
     midi_init();
 
-    lcd_os_show_home();
 
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+
+    lcd_os_show_home();
 
     //main tasks
     xTaskCreate(handle_buttons, "buttons-pooling-task", 1024, NULL, 10, NULL);
