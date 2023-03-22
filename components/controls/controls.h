@@ -14,6 +14,8 @@
 #define UP_BTN 2
 #define DOWN_BTN 1
 #define CHANGE_OCTAVE_BTN 0
+#define LOOP_CONTROL_1 102
+#define LOOP_CONTROL_2 103
 
 void buttons_init(uint8_t button_pins[]);
 void update_buttons(btnStack_t *btns);

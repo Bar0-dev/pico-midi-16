@@ -165,12 +165,16 @@ static void toggle_mode(state_t *now){
 }
 
 static void up_btn_press_handle(state_t *now){
-    switch (now->mode)
-    {
+    switch (now->mode){
+    case MIDI_MODE:
+        midi_send_cc(127, LOOP_CONTROL_1);
+        break;
+
     case EDIT_KEY_MODE:
         now->notes[now->note_to_edit.id] += 1;
         lcd_os_show_key_setting(now->note_to_edit.id, now->notes[now->note_to_edit.id]);
         break;
+
     case EDIT_CC_MODE:
         now->ccs[now->cc_to_edit.id] += 1;
         lcd_os_show_cc_setting(now->cc_to_edit.id, now->ccs[now->cc_to_edit.id]);
@@ -182,12 +186,16 @@ static void up_btn_press_handle(state_t *now){
 }
 
 static void down_btn_press_handle(state_t *now){
-    switch (now->mode)
-    {
+    switch (now->mode){
+    case MIDI_MODE:
+        midi_send_cc(127, LOOP_CONTROL_2);
+        break;
+
     case EDIT_KEY_MODE:
         now->notes[now->note_to_edit.id] -= 1;
         lcd_os_show_key_setting(now->note_to_edit.id, now->notes[now->note_to_edit.id]);
         break;
+
     case EDIT_CC_MODE:
         now->ccs[now->cc_to_edit.id] -= 1;
         lcd_os_show_cc_setting(now->cc_to_edit.id, now->ccs[now->cc_to_edit.id]);
